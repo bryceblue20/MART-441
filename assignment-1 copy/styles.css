@@ -1,0 +1,104 @@
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 600px) {
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 992px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+
+body {
+background-image: url(https://wallpaperaccess.com/full/3949372.jpg);
+background-repeat: no-repeat;
+background-size: 5000px
+}
+
+
+img {
+  max-width: 28%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.img3 {
+  display: flex;
+  margin-right: auto;
+  width:auto;
+  height:100%;
+  background-color: darkgreen;
+}
+
+
+.img4 {
+  display: flex;
+  margin-right: auto;
+  width:auto;
+  height:100%;
+  background-color: darkgreen;
+  border-radius:50%
+}
+
+
+.gridContainer {
+display: flex;
+border: thick solid black;
+background-color:aquamarine;
+width:700px;
+height:500px;
+margin-right: auto;
+margin-left: auto;
+}
+
+.gridContainer2 {
+  background-color: green;
+  border: thick solid lightgreen;
+}
+
+h1 {
+  font-size:190px;
+  text-align: center;
+  font-style: italic;
+  font-weight: 700;
+  color:white;
+  background-color:darkolivegreen;
+
+}
+
+h2 {
+  text-align: center;
+  text-decoration: double;
+  color:aliceblue;
+  padding-bottom: 5%;
+  font-size:50px;
+}
+
+h3 {
+  font-size: 100px;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-thickness: 8px;
+  color:lightgreen;
+  background-color:olivedrab;
+
+}
+
+h4{
+font-size: 80px;
+text-align:left;
+}
+
+ul{
+  text-align: left;
+  font-weight:500;
+  font-size:x-large; 
+}
+
+p {
+  font-size: 25px;
+  text-align: center;
+
+}
