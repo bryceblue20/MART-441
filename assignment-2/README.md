@@ -1,1 +1,1 @@
-hello world!
+    A nice and simple static site of a cute pufferfish! I mostly used this work time to review some html and css concepts and to practice code for things I want to do for future projects, such as responsive grids with text and images side by side one another, or list or table stylings utilizing css to create appealing looks. Im feeling pretty confident with html and css though still a bit shaky and struggle a fair bit with solving particular issues. Nonetheless I am looking forward to see how Javascript can help make my more static sites more dynamic and lively!
