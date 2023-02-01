@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <script>
+function Story(choice) {
+    var answer1 = document.getElementById("choice1").innerHTML;
+    var answer2 = document.getElementById("choice2").innerHTML;
+    if(choice == 1 && answer1 == "Yes") {
+        document.getElementById("story").innerHTML = "Godzilla peacefully absorbs from a distance, before running into the mighty and powerful lobster kaiju Ebira, how will you fight it?"; 
+        document.getElementById("choice1").innerHTML = "Grab it by the front and throw it far!";
+        document.getElementById("choice2").innerHTML = "Blast it with your atomic breath!"
+    } else if (choice == 2 && answer2 == "No") {
+        document.getElementById("story").innerHTML = "You stomp through Fukushima on your way to the plant, and to prevent a nuclear disaster Mothra comes to stop you, how will you fight it?";
+        document.getElementById("choice1").innerHTML = "Hit her with your long tail!";
+        document.getElementById("choice2").innerHTML = "Wait till she gets close and bite!"; 
+    } else if (choice == 1 && answer1 == "Grab it by the front and throw it far!") {
+        document.getElementById("story").innerHTML = "Once Ebira lands in the water, the shock from your strength intimidates it and it leaves, will you go after it?";
+        document.getElementById("choice1").innerHTML = "Leave it be";
+        document.getElementById("choice2").innerHTML = "Go after it and finish the battle";
+    } else if (choice == 2 && answer2 == "Blast it with your atomic breath!") {
+        document.getElementById("story").innerHTML = "It dodges it and the resulting blast scares the citizens and they send the military after you, will you defend yourself?";
+        document.getElementById("choice1").innerHTML = "retreat and come back to feed once they leave";
+        document.getElementById("choice2").innerHTML = "Swat at the helicopters with your claws";
+    } else if (choice == 1 && answer1 == "Hit her with your long tail!") {
+        document.getElementById("story").innerHTML = "You missed your mark, will you try to hit her once more?";
+        document.getElementById("choice1").innerHTML = "Try again";
+        document.getElementById("choice2").innerHTML = "Atomic breath!!";
+    } else if (choice == 2 && answer2 == "Wait till she gets close and bite!") {
+        document.getElementById("story").innerHTML = "You have her in your jaws now, what do you do?";
+        document.getElementById("choice1").innerHTML = "Bite down immediately!";
+        document.getElementById("choice2").innerHTML = "Spin her around!";
+    } else if (choice == 1 && answer1 == "Leave it be") {
+        document.getElementById("story").innerHTML = "You thought peacefully and let it go, you are a nice lizard!" + "<br>Thanks for playing!";
+    } else if (choice == 2 && answer2 == "Go after it and finish the battle") {
+        document.getElementById("story").innerHTML = "As you chase it, it dives into the water and sneaks attacks you from behind!" + "<br>GAME OVER";
+    } else if (choice == 1 && answer1 =="retreat and come back to feed once they leave") {
+        document.getElementById("story").innerHTML = "You were able to stop a confrontation and go about you business! Your not such a bad monster after all" + "<br>Thanks for playing!"; 
+    } else if (choice == 2 && answer2 =="Swat at the helicopters with your claws") {
+        document.getElementById("story").innerHTML ="The military is now prompted to use the Oxygen Destroyer, defeating Godzilla once and for all!" + "<br>GAME OVER"; 
+    } else if (choice == 1 && answer1 == "Try again") {
+        document.getElementById("story").innerHTML = "you accidentally swat your tail on a nearby building, whereas it falls on top of you" + "<br>GAME OVER";
+    } else if (choice == 2 && answer2 == "Atomic breath!!") {
+        document.getElementById("story").innerHTML = "your breath strikes the power plant, causing nuclear fallout" + "<br>GAME OVER";
+    } else if (choice == 1 && answer1 == "Bite down immediately!") {
+        document.getElementById("story").innerHTML = "You defeat Mothra, but exhausted, you hunker down and feed from the radiation from a distance, stopping any further damage" + "<br>Thanks for playing!";
+    } else if (choice == 2 && answer2 =="Spin her around!") {
+        document.getElementById("story").innerHTML = "intimdated by your jaw strength, she retreats. You, however, are exhausted and hunker down and feed from the radiation from a distance, stopping any further damage" + "<br>Thanks for playing!";
+    }
+}
+
+
+
+    </script>
+    
+      <style>
+   @media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 600px) {
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 992px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+
+img {
+    display: block;
+    float: left;
+    border: solid rgb(103, 3, 3) 6px;
+    max-width: 100%;
+    width: 1000px;
+    height: auto;
+}
+
+#choice1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgb(103, 3, 3);
+    border:solid rgb(103, 3, 3) 4px;
+    color: white;
+    font-size: 2vw;
+}
+
+#choice1:hover{
+    font-size: 4vw;
+    font-weight:600;
+    background-color: rgba(64, 79, 18, 0.981);
+    color: black;
+    transition-duration:0.4s;
+    padding:15px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border:solid rgb(103, 3, 3) 6px;
+}
+
+#choice2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgb(103, 3, 3);
+    border:solid rgb(103, 3, 3) 4px;
+    color: white;
+    font-size: 2vw;
+    padding: 5px;
+}
+
+#choice2:hover {
+    font-size: 4vw;
+    font-weight:600;
+    background-color: rgb(170, 12, 12);
+    color: black;
+    transition-duration:0.4s;
+    padding:15px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border:solid rgb(103, 3, 3) 6px;
+}
+
+
+#imgandbuttons button {
+margin-top: 70px
+}
+
+body {
+background-color: rgb(103, 53, 53);
+} 
+
+section {
+    transition-duration: 0.6s;
+    background-image: url("https://www.wallpapertip.com/wmimgs/31-315904_fire-wallpaper-iphone.jpg");
+}
+
+
+
+
+h1 {
+    float:left;
+    padding-left:30px;
+    font-size:8vw;
+    font-weight: 800;
+    
+    
+}
+
+h1:hover {
+    transition-duration:0.7s;
+    font-style: italic;
+    color:white;
+}
+
+
+
+img:hover {
+    transition-duration: 0.8s;
+    display: block;
+    float: left;
+    border: solid rgb(103, 3, 3) 6px;
+    max-width: 100%;
+    width: 1300px;
+    height: auto;
+   
+}
+#story {
+    float: left;
+    padding-left:20px;
+    padding-right:20px;
+    font-size:1.5vw;
+    color:black;
+    font-weight:800;
+    text-align:center; 
+
+}
+
+a {
+    text-align: center; 
+    color: white; 
+    font-weight: 700; 
+    font-size:2vw;
+}
+
+a:hover {
+    color: black;
+    font-size: 2.4vw;
+    transition-duration: 0.6s;
+    font-style:italic;
+}
+</style>
+    </head>
+    <body>
+        <section>
+        <img src="image/godzilla.jpeg">
+        <button id="choice1" onclick="Story(1);">Yes</button>&nbsp;
+        <button id="choice2" onclick="Story(2);">No</button>&nbsp;
+        <hr>
+</section>
+<h1><u>Godzilla's Journey</u></h1>
+<br>
+<div id="story">
+    The powerful incarnation of the Atom bomb has awakened yet again from the depths to reveal
+    himself to the rest of the world! Its headed to Fukushima Japan to feed from the radiation of 
+    their world-renowned nuclear plant. Will you feed from a distance to protect the civilians of 
+    the city?<br>
+    &nbsp;<a href="storypath.html">Curious about the different paths?</a>
+</div>
+</body>
+ </html>
