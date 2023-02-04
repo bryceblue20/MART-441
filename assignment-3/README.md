@@ -1,2 +1,4 @@
-hi there world!!
+I found this to be a rather fun experience this go round, although typing every path from the js function was tedious, I wanted to type out every one to ensure I learned how it would be organized and learned the internal logic of js. I added some more visual flourishes then last time because the 2 other coding classes I had tied to html and css are finally starting to come back to me! Another object of frustration was keeping track of every single story path, so created a path in Photoshop to keep me organized, and even connected another HTML in the beginning of the "adventure" that has this for viewers who want to know what all the paths are. 
+
+I still cannot get links to a seperate css or js file to work on Visual Studio Code and cannot for the life of me track the issue, so unfortunately have all of it on a single html page still, hope sometime this semester I would be able to fix it, but if not it isnt a big deal so long as my html functions properly!
 
