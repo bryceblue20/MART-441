@@ -8,7 +8,7 @@
 function Story(choice) {
     var answer1 = document.getElementById("choice1").innerHTML;
     var answer2 = document.getElementById("choice2").innerHTML;
-    if(choice == 1 && answer1 == "Yes") {
+    if( answer1 === "Yes") {
         document.getElementById("story").innerHTML = "Godzilla peacefully absorbs from a distance, before running into the mighty and powerful lobster kaiju Ebira, how will you fight it?"; 
         document.getElementById("choice1").innerHTML = "Grab it by the front and throw it far!";
         document.getElementById("choice2").innerHTML = "Blast it with your atomic breath!"
@@ -129,11 +129,8 @@ background-color: rgb(103, 53, 53);
 } 
 
 section {
-    transition-duration: 0.6s;
     background-image: url("https://www.wallpapertip.com/wmimgs/31-315904_fire-wallpaper-iphone.jpg");
 }
-
-
 
 
 h1 {
@@ -154,12 +151,12 @@ h1:hover {
 
 
 img:hover {
-    transition-duration: 0.8s;
+    transition-duration: 0.4s;
     display: block;
     float: left;
     border: solid rgb(103, 3, 3) 6px;
     max-width: 100%;
-    width: 1300px;
+    width:1100px;
     height: auto;
    
 }
