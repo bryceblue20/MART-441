@@ -3,13 +3,39 @@
         body{
             background-color: bisque;
         }
+
+       
+        #choice:hover {
+           
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            transition-duration:0.7s;
+         
+
+        }
+       
+        #maingImage {
+            padding-top:13px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #choice {
+    text-align: center;
+        }
+        
+        .centerbox{
+            margin-left:auto;
+            margin-right:auto;
+        }
+        
+        
     </style>
     <script>
-        function getChoice1()
+        function getChoice()
         {
-            var myChoice = document.getElementById("choice").value;
+            var myAnswer = document.getElementById("answer").value;
             var myQuestion = document.getElementById("question");
-            if(myChoice === "Green")
+            if(myAnswer === "Green")
             {
                 
 
@@ -33,7 +59,12 @@
                 document.getElementById("mainImage").src = "grateful.jpg"
                 myQuestion.innerHTML = "Thank you for your kindness"
             }
+                
+            
+            
         }
+
+    
     </script>
 
     
@@ -41,7 +72,6 @@
 
         <h1>Into the void</h1>
         <br>
-        <img src="tree.jpeg" id="mainImage">
     <div id="question">
     <br>
         It was a dark and lonely time in Bob's life. He was wandering aimlessly and wondering where to go.
@@ -52,9 +82,18 @@
     </div>
        
         <br>
-        <input type="text" size="30" id="choice" value="Please enter Green or Blue">
-        <button id="btnSubmit" onclick="getChoice1();">Click to continue</button>
-
+        <section>
+            <div class="centerbox">
+        <img src="tree.jpeg" id="mainImage">
+        </div>
+        <input type="text" size="55" id= "answer" value="Please enter Green or Blue">
+        <button id="btnSubmit" onclick="getChoice();">Click to continue</button>
+     
+        </section>
+        <p style="text-align:center; background-color:rgb(81, 74, 74); border: solid black";>
+            <img src="images/character copy.jpg">
+            <img src="images/character copy.jpg">
+            </p>
     </body>
 
 </html>

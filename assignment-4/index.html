@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 "Space Flight"</title>
+       <link href="styles.css"rel="stylesheet"type="text/css">
+      <style>
+
+   @media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 600px) {
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 992px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+
+
+
+
+#main {
+     background-image: url(https://cdn.sanity.io/images/2yyup5mx/production/d5a915cd9db3444998926f61645b6f83a53aced0-5000x2813.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+}
+
+
+
+#title {
+    font-family:'Futuristic Armour';
+    font-size:7vw;
+    font-weight:800px;
+    color: solid;
+    padding:2px;
+    letter-spacing: .5px;
+    color:white;
+    margin-left:auto;
+}
+
+#title:hover{
+    font-size:7.7vw;
+    transition-duration:0.4s;
+}
+ #paragraph {
+    float:left;
+    font-size:20px;
+    font-weight:200px;
+    color:white;
+    display:flex;
+    font-size:2vw;
+    font-weight:bold;
+    padding:20px;
+    text-shadow: 1px 0  #000000, 0 2px  #000000, 2px 0  #000000, 0 1px  #000000;
+    
+}  
+
+#btnSubmit {
+    display:block;
+    font-family:'Robotica';
+    font-size:2.4vw;
+    background-color: rgb(213, 235, 238);
+    text-align: center;
+    font-weight:200px;
+    margin-bottom:50px;
+    border-radius:20%;
+}
+
+#btnSubmit:hover {
+    font-family:'Robotica';
+    display:block;
+    font-size:2.7vw;
+    background-color: black;
+    color: white;
+    transition-duration:0.4s;
+    text-align: center;
+    font-weight:100px;
+    margin-bottom:50px;
+    border-radius:20%;
+}
+
+#btnSubmit:active {
+    font-family:'Robotica';
+    display:block;
+    font-size:2.7w;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-weight:100px;
+    margin-bottom:50px;
+    border-radius:20%;
+    transition-duration:0s;
+}
+
+#answer {
+    font-size:1.3vw;
+    border-radius: 15%;
+    background-color:rgb(213, 235, 238);
+}
+
+#answer:hover {
+    font-size:1.3vw;
+    border-radius: 15%;
+    background-color:gainsboro;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, 
+     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+     transition-duration:0.4s;
+
+}
+
+   </style>
+   <script>
+    function getChoice()
+    {
+        var myAnswer=document.getElementById("answer").value;
+        var theStory=document.getElementById("paragraph");
+        if (myAnswer==="green")
+        {
+        document.getElementById("paragraph").innerHTML="The green button ends the flight permaturely, <br> disappointing everyone inside, will you be a good mannered <br> individual and apologize, despite not knowing the outcome, <br> or press the yellow button to <br> see if it will fix it? <br> <br> (type 'apologize' or 'press yellow next')";
+        }
+        else if(myAnswer==="yellow") 
+        {
+            theStory.innerHTML="The yellow button triggers an annoying alarm, <br> and the only way to stop it <br> is by ending the flight with the green button. <br>  Push the green button, stopping the alarm but <br> disappointing the passengers, or keep the tour going but <br> with the alarm in the background? <br><br> (type 'press green', or 'dont press green')";
+        }
+        else if(myAnswer==="apologize") 
+        {
+            
+            theStory.innerHTML="The people forgave you, but the flight <br>  came to an end and everyone got their money back. <br>  You felt a nice comfort in forgiveness<br>  and remembered the beauty of space regardless,<br>  but effected the future of commercial space flight!<br><br> Did you enjoy the format <br> of this short journey? <br> (enter yes or no)";
+        }
+        else if(myAnswer==="press yellow next") 
+        {
+           
+            theStory.innerHTML="it activated an annoying alarm, bringing the <br> disappointed passengers back to earth <br> with a terrible sound. The funding from the flight <br> will help future space flight endeavors, and the <br> memories you and them made are still intact,<br> but the stern looks you got from <br> the passengers made you feel dreary <br><br> Did you enjoy the format <br> of this short journey? <br> (enter yes or no)";
+        }
+        else if(myAnswer==="press green")
+        {
+          
+            theStory.innerHTML="Though relief from the noise is now in the air, <br>the flight ended and people got their money back. <br>You will remember the beauty of space forever <br> regardless, but now effected the future of<br> commercial space flight! <br><br> Did you enjoy the format <br> of this short journey? <br> (enter yes or no)";
+        }
+        else if(myAnswer==="dont press green")
+        {
+           
+            theStory.innerHTML="Though funding from the flight will help, <br> the stern looks you get from <br> everyone made you feel dreary.<br><br> Did you enjoy the format <br> of this short journey? <br> (enter yes or no)" ;
+        }
+        else if(myAnswer==="yes"){
+            theStory.innerHTML="Thank you for your input, <br> I will continue to grow <br> in the future and happy <br> to hear I have gained <br> experience!"
+
+        }
+        else if(myAnswer==="no")
+            theStory.innerHTML="Thank you for your input, <br> I will try to grow more <br> and do better in the future!"
+    }
+</script>
+  </head>
+  <body id="main">
+    <section id="name">
+    <h1 id="title">
+        Space Flight
+    </h1>
+    <button id="btnSubmit" onclick="getChoice();">Activate!</button>
+    <input type="text" size="55" id= "answer">
+    </section>
+    <section>
+    <br>
+    <div id="paragraph">
+                A brand new commercial Space flight is about to begin, <br>
+                launching off into the Stratosphere to get a good glimpse<br> 
+                of our world! In front of you are two colored buttons, <br>
+                one large and green and the other small and yellow.<br> 
+                You don't know what any of them do, which one<br>
+                 will you press? <br><br>
+                 (enter either green or yellow in the<br> 
+                 white box, then press "activate"!)
+                
+            
+    </div>
+    </section>
+    
+ </body>
+ </html>
+
+
