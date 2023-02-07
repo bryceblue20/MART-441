@@ -148,11 +148,13 @@ background-size: cover;
             theStory.innerHTML="Though funding from the flight will help, <br> the stern looks you get from <br> everyone made you feel dreary.<br><br> Did you enjoy the format <br> of this short journey? <br> (enter yes or no)" ;
         }
         else if(myAnswer==="yes"){
-            theStory.innerHTML="Thank you for your input, <br> I will continue to grow <br> in the future and happy <br> to hear I have gained <br> experience!"
+            theStory.innerHTML="Thank you for your input, <br> I will continue to grow <br> in the future and happy <br> to hear I have gained <br> experience! <br><br> Restart?(enter restart if yes)"";
 
         }
         else if(myAnswer==="no")
-            theStory.innerHTML="Thank you for your input, <br> I will try to grow more <br> and do better in the future!"
+            theStory.innerHTML="Thank you for your input, <br> I will try to grow more <br> and do better in the future! <b><br> Restart?(enter restart if yes)";
+       else if(myAnswer==="restart")
+            theStory.innerHTML= "A brand new commercial Space flight is about to begin, <br> launching off into the Stratosphere to get a good glimpse<br> of our world! In front of you are two colored buttons, <br>one large and green and the other small and yellow.<br> You don't know what any of them do, which one<br>will you press? <br><br>(enter either green or yellow in the<br> white box, then press 'activate'!";
     }
 </script>
   </head>
