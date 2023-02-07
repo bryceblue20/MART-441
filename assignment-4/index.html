@@ -1,10 +1,54 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 4 "Space Flight"</title>
        <link href="styles.css"rel="stylesheet"type="text/css">
+       <script>
+        function getChoice()
+        {
+            var myAnswer=document.getElementById("answer").value;
+            var theStory=document.getElementById("paragraph");
+            if (myAnswer==="green")
+            {
+            document.getElementById("paragraph").innerHTML="The green button ends the flight permaturely, <br> disappointing everyone inside, will you be a good mannered <br> individual and apologize, despite not knowing the outcome, <br> or press the yellow button to <br> see if it will fix it? <br> <br> (type 'apologize' or 'press yellow next')";
+            }
+            else if(myAnswer==="yellow") 
+            {
+                theStory.innerHTML="The yellow button triggers an annoying alarm, <br> and the only way to stop it <br> is by ending the flight with the green button. <br>  Push the green button, stopping the alarm but <br> disappointing the passengers, or keep the tour going but <br> with the alarm in the background? <br><br> (type 'press green', or 'dont press green')";
+            }
+            else if(myAnswer==="apologize") 
+            {
+                
+                theStory.innerHTML="The people forgave you, but the flight <br>  came to an end and everyone got their money back. <br>  You felt a nice comfort in forgiveness<br>  and remembered the beauty of space regardless,<br>  but effected the future of commercial space flight!<br><br> Did you enjoy the format <br> of this short journey? <br> (enter yes or no)";
+            }
+            else if(myAnswer==="press yellow next") 
+            {
+               
+                theStory.innerHTML="it activated an annoying alarm, bringing the <br> disappointed passengers back to earth <br> with a terrible sound. The funding from the flight <br> will help future space flight endeavors, and the <br> memories you and them made are still intact,<br> but the stern looks you got from <br> the passengers made you feel dreary <br><br> Did you enjoy the format <br> of this short journey? <br> (enter yes or no)";
+            }
+            else if(myAnswer==="press green")
+            {
+              
+                theStory.innerHTML="Though relief from the noise is now in the air, <br>the flight ended and people got their money back. <br>You will remember the beauty of space forever <br> regardless, but now effected the future of<br> commercial space flight! <br><br> Did you enjoy the format <br> of this short journey? <br> (enter yes or no)";
+            }
+            else if(myAnswer==="dont press green")
+            {
+               
+                theStory.innerHTML="Though funding from the flight will help, <br> the stern looks you get from <br> everyone made you feel dreary.<br><br> Did you enjoy the format <br> of this short journey? <br> (enter yes or no)" ;
+            }
+            else if(myAnswer==="yes"){
+                theStory.innerHTML="Thank you for your input, <br> I will continue to grow <br> in the future and happy <br> to hear I have gained <br> experience! <br> <br> Restart?(enter restart in the box)";
+    
+            }
+            else if(myAnswer==="no")
+                theStory.innerHTML="Thank you for your input, <br> I will try to grow more <br> and do better in the future! <br> <br> Restart?(enter restart in the box)";
+
+            else if(myAnswer==="restart")
+            theStory.innerHTML= "A brand new commercial Space flight is about to begin, <br> launching off into the Stratosphere to get a good glimpse<br> of our world! In front of you are two colored buttons, <br>one large and green and the other small and yellow.<br> You don't know what any of them do, which one<br>will you press? <br><br>(enter either green or yellow in the<br> white box, then press 'activate'!";
+        }
+    </script>
       <style>
 
    @media only screen and (max-width: 600px) {
@@ -114,49 +158,7 @@ background-size: cover;
 }
 
    </style>
-   <script>
-    function getChoice()
-    {
-        var myAnswer=document.getElementById("answer").value;
-        var theStory=document.getElementById("paragraph");
-        if (myAnswer==="green")
-        {
-        document.getElementById("paragraph").innerHTML="The green button ends the flight permaturely, <br> disappointing everyone inside, will you be a good mannered <br> individual and apologize, despite not knowing the outcome, <br> or press the yellow button to <br> see if it will fix it? <br> <br> (type 'apologize' or 'press yellow next')";
-        }
-        else if(myAnswer==="yellow") 
-        {
-            theStory.innerHTML="The yellow button triggers an annoying alarm, <br> and the only way to stop it <br> is by ending the flight with the green button. <br>  Push the green button, stopping the alarm but <br> disappointing the passengers, or keep the tour going but <br> with the alarm in the background? <br><br> (type 'press green', or 'dont press green')";
-        }
-        else if(myAnswer==="apologize") 
-        {
-            
-            theStory.innerHTML="The people forgave you, but the flight <br>  came to an end and everyone got their money back. <br>  You felt a nice comfort in forgiveness<br>  and remembered the beauty of space regardless,<br>  but effected the future of commercial space flight!<br><br> Did you enjoy the format <br> of this short journey? <br> (enter yes or no)";
-        }
-        else if(myAnswer==="press yellow next") 
-        {
-           
-            theStory.innerHTML="it activated an annoying alarm, bringing the <br> disappointed passengers back to earth <br> with a terrible sound. The funding from the flight <br> will help future space flight endeavors, and the <br> memories you and them made are still intact,<br> but the stern looks you got from <br> the passengers made you feel dreary <br><br> Did you enjoy the format <br> of this short journey? <br> (enter yes or no)";
-        }
-        else if(myAnswer==="press green")
-        {
-          
-            theStory.innerHTML="Though relief from the noise is now in the air, <br>the flight ended and people got their money back. <br>You will remember the beauty of space forever <br> regardless, but now effected the future of<br> commercial space flight! <br><br> Did you enjoy the format <br> of this short journey? <br> (enter yes or no)";
-        }
-        else if(myAnswer==="dont press green")
-        {
-           
-            theStory.innerHTML="Though funding from the flight will help, <br> the stern looks you get from <br> everyone made you feel dreary.<br><br> Did you enjoy the format <br> of this short journey? <br> (enter yes or no)" ;
-        }
-        else if(myAnswer==="yes"){
-            theStory.innerHTML="Thank you for your input, <br> I will continue to grow <br> in the future and happy <br> to hear I have gained <br> experience! <br><br> Restart?(enter restart if yes)"";
-
-        }
-        else if(myAnswer==="no")
-            theStory.innerHTML="Thank you for your input, <br> I will try to grow more <br> and do better in the future! <b><br> Restart?(enter restart if yes)";
-       else if(myAnswer==="restart")
-            theStory.innerHTML= "A brand new commercial Space flight is about to begin, <br> launching off into the Stratosphere to get a good glimpse<br> of our world! In front of you are two colored buttons, <br>one large and green and the other small and yellow.<br> You don't know what any of them do, which one<br>will you press? <br><br>(enter either green or yellow in the<br> white box, then press 'activate'!";
-    }
-</script>
+   
   </head>
   <body id="main">
     <section id="name">
@@ -184,5 +186,7 @@ background-size: cover;
     
  </body>
  </html>
+
+
 
 
