@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <title>
+       Assignment 5: Memory Matching
+    </title>
+    <script src="scripts/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    </link>
+    
+    <script>
+      // create an array of image names that correspond to the image tags
+var imageTags = ["image1", "image2", "image3", "image4", "image5", "image6", "image7", "image8"];
+// create a variable with the blank image name
+var blankImagePath = "images/spacequestionmark.jpeg";
+// create a empty array for the actual images
+var actualImages = new Array();
+    
+function printBlanks()
+{
+   // call our random image creation function
+    createRandomImageArray();
+    // create a for loop
+    for(var i = 0; i < imageTags.length; i++)
+    {
+    // iterate through the image tag ids and sets the source 
+        document.getElementById(imageTags[i]).src= blankImagePath;
+    }
+       
+    
+    
+}
+
+function createRandomImageArray()
+{
+    // create an array of actual images
+    var actualImagePath = ["images/crab.jpeg", "images/pillars.jpeg", "images/galaxy.jpeg", "images/earth.jpeg","images/blackhole.jpeg"];
+    // create another array to make sure the images only get added twice
+    var count = [0,0,0,0,0];
+    // create a while statement to check to see if our actual image array is full
+    while(actualImages.length < 9)
+    {
+        // get a random number between 0 and the number total number of images that we can choose from
+        var randomNumber = Math.floor(Math.random() * actualImagePath.length)
+          // create an if statement that says if the total number added is less than 2, then
+        // add the image to the actual image array
+        if(count[randomNumber] < 5)
+        
+            actualImages.push(actualImagePath[randomNumber]);
+            // then add one to the array that makes sure only two images can be added
+            count[randomNumber] = count[randomNumber] + 1;
+        }
+    }
+    
+  
+
+
+
+    
+    
+        
+
+
+function flipImage(number)
+{
+    document.getElementById(imageTags[number]).src= actualImages[number];
+        // this should be a quick function that just changes
+        // the image based on what number was pressed
+        
+    
+}
+
+
+    </script>
+
+<style>
+  .main {
+    background-color:darkslategray;
+  }
+  
+
+  section {
+    background-image: url(https://www.si.edu/sites/default/files/styles/social_media/public/blog/crab_nebula.jpg?itok=l-fZ5PRC);
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+text-align: center;
+margin-left: auto; 
+margin-right:auto;
+width: 100%; 
+height: auto;
+  }
+
+  section:hover{
+    border:solid 9px;
+    border-right:1px;
+    border-left:2px;
+  border-radius: 15px;
+  border-color:rgb(79, 130, 130);
+  transition-delay: 0.3s;
+  transition-duration:0.5s;
+}
+
+h1{
+  text-align: center;
+  font-family:'VanguardianLaser';
+  font-size:4.2vw;
+}
+
+h1:hover{
+  color:white;
+  transition-duration:0.4s;
+}
+
+.prompt:hover{
+  color: white;
+  font-size:3.4vw;
+  transition-duration:0.4s;
+}
+
+
+img:hover{
+  width:"400";
+  height:"400";
+}
+
+.prompt{
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2.5vw;
+  color: darkslategray;
+}
+
+
+  </style>
+</head>
+
+<body onload="printBlanks()"; class="main";>
+    <h1>Space Memory Game
+      <p class="prompt">
+        Click on an image below
+      </p>
+    </h1>
+<section>
+<table> 
+         <tr>
+              <img style= "padding-right:10px; padding-top:10px; " src="" id="image1" width="350" height="300" onclick="flipImage(0);">
+              <img style= "padding-top: 10px;" src="" id="image2" width="350" height="300" onclick="flipImage(1);">
+          </tr>  
+          <br>
+          <tr>
+              <img style="padding-right:10px; padding-top:10px;" src="" id="image3" width="350" height="300" onclick="flipImage(2);">
+              <img style=" padding-top:10px;" src="" id="image4" width="350" height="300" onclick="flipImage(3);">
+           </tr>
+           <br>
+           <tr>
+            <img style="padding-right:10px; padding-top:10px;" src="" id="image5" width="350" height="300" onclick="flipImage(4);">
+            <img style=" padding-top:10px;" src="" id="image6" width="350" height="300" onclick="flipImage(5);">
+         </tr>
+         <br>
+         <tr>
+          <img style="padding-right:10px; padding-top:10px;" src="" id="image7" width="350" height="300" onclick="flipImage(6);">
+          <img style=" padding-top:10px;" src="" id="image8" width="350" height="300" onclick="flipImage(7);">
+        </tr>
+        <br>
+</table>   
+   
+</section>
+</body>
+
+</html>
