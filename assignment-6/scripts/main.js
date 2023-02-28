@@ -80,7 +80,7 @@ function changeImage(number)
 
     if(spaceImages[secondNumber] != spaceImages[firstNumber] && firstNumber >= 0 && secondNumber >= 0)
     {
-        score++;
+        attempts++;
         setTimeout(imagesDisappear, 200); 
     }
    
