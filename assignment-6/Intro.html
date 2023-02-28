@@ -1,0 +1,167 @@
+<html>
+
+<head>
+    <title>
+        Memory Matching!
+    </title>
+    <script src="scripts/main.js"></script>
+   <style>
+    body{
+    background-color:slategray;
+	margin-left:auto;
+	margin-right:auto;
+}
+section {
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/003/384/754/original/animation-of-flying-through-outer-space-towards-milky-way-galaxy-free-video.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+text-align: center;
+margin-left: auto; 
+margin-right:auto;
+width: 100%; 
+height: auto;
+  }
+
+h1{
+	
+ text-align: center;
+ font-family: 'VanguardianLaser';
+ font-size:4.7vw;
+ padding-bottom:0%;
+}
+
+.headerPrompt {
+    text-align:center;
+    font-size:1.5vw;
+    font-style:italic;
+}
+
+.tableOutline {
+	margin-right:auto;
+	margin-left:auto;
+	display: table;
+	width: 1%;
+	
+}
+
+tr {
+	display: table-row;
+	font-size:1.5vw;
+}
+
+
+.textPrompt {
+    padding-top:10px;
+	text-align:center;
+    font-size:2vw;
+    color:white;
+    font-family:'Robotica';
+}
+
+#txtFirstName{
+    border-radius:20%;
+    font-size:1.4vw;
+    text-align:center;
+    
+}
+
+#txtFirstName:hover{
+    border-radius:20%;
+    font-size:1.6vw;
+    background-color:lightgray;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    transition-duration:0.4s;
+
+}
+
+#txtLastName{
+    border-radius:20%;
+    font-size:1.4vw;
+    text-align:center;
+    
+}
+
+#txtLastName:hover{
+    border-radius:20%;
+    font-size:1.6vw;
+    background-color:lightgray;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    transition-duration:0.4s;
+
+}
+
+#txtAge{
+    border-radius:20%;
+    font-size:1.4vw;
+    text-align:center;
+}
+
+#txtAge:hover{
+    border-radius:20%;
+    font-size:1.6vw;
+    background-color:lightgray;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    transition-duration:0.4s;
+
+}
+
+#btnSubmit{
+    font-family:'Robotica';
+    font-size:1.3vw;
+    margin-top:30px;
+    margin-bottom:20px;
+    border-radius:15%;
+}
+
+#btnSubmit:hover{
+    color:white;
+    background-color:black;
+    font-size:2vw;
+    transition-duration:0.4s;
+    
+}
+
+   </style>
+</head>
+
+<body>
+    <h1>Space Match</h1>
+    <h1 class="headerPrompt">type your info below to start</h1>
+
+        <section>
+    <div class="tableOutline">
+    
+            <tr>
+               <h1 class="textPrompt">
+                First Name
+               </h1>
+            </tr>
+            <tr>
+                <td><input type="text" id="txtFirstName"></td>
+            </tr>
+            <tr>
+              <h1 class="textPrompt">
+                Last Name
+              </h1>
+            </tr>
+              <tr>
+                <td><input type="text" id="txtLastName"></td>
+              </tr>
+            <tr>
+                <h1 class="textPrompt">
+                    Age
+                </h1>
+            </tr>
+                <td><input type="text" id="txtAge"></td>
+            </tr>
+            <tr>
+                <td><button id="btnSubmit" onclick="addToEnd();">Submit</td></div>
+            </tr>
+    </div>
+        </section>
+        
+</body>
+
+</html>

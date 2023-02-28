@@ -1,0 +1,100 @@
+
+
+<html>
+
+<head>
+    <title>
+        Memory Matching!
+    </title>
+    <script src="scripts/main.js"></script>
+    <style>
+        section {
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/003/384/754/original/animation-of-flying-through-outer-space-towards-milky-way-galaxy-free-video.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+text-align: center;
+margin-left: auto; 
+margin-right:auto;
+width: 100%; 
+height: auto;
+
+  }
+
+.textPrompt{
+  text-align: center;
+  font-family:'VanguardianLaser';
+  font-size:3vw;
+  color:grey;
+  opacity:30%
+}
+
+.textPrompt:hover{
+    font-size:3.7vw;
+    color:black;
+    transition-duration:0.4s;
+    opacity:100%;
+}
+
+h1 {
+ text-align: center;
+ font-family: 'VanguardianLaser';
+ font-size:4.7vw;
+ color:black;
+}
+
+tr {
+ margin-left:auto;
+ margin-right:auto;
+}
+
+img:hover {
+border:solid 10px;
+border-color:white;
+border-radius: 80%;
+margin-top:8px;
+transition-duration: 0.2s;
+}
+
+
+
+
+  </style>
+</head>
+<body onload="printQuestionMark();endInfo();">
+    <h1>Space Match
+    </h1>
+        <h1 class="textPrompt">
+            click on the images below
+        </h1>
+        <section>
+            <tr>
+                <td><img src="" id="image1" width="250" height="200" onclick="changeImage(0);"></td>
+                <td><img src="" id="image2" width="250" height="200" onclick="changeImage(1);"></td>
+            </tr>
+            <br>
+            <tr>
+                <td><img src="" id="image3" width="250" height="200" onclick="changeImage(2);"></td>
+                <td><img src="" id="image4" width="250" height="200" onclick="changeImage(3);"></td>
+            </tr>
+            <br>
+            <tr>
+                <td><img src="" id="image5" width="250" height="200" onclick="changeImage(4);"></td>
+                <td><img src="" id="image6" width="250" height="200" onclick="changeImage(5);"></td>
+            </tr>
+            <br>
+            <tr>
+                <td><img src="" id="image7" width="250" height="200" onclick="changeImage(6);"></td>
+                <td><img src="" id="image8" width="250" height="200" onclick="changeImage(7);"></td>
+            </tr>
+            <br>
+            <tr>
+                <td><img src="" id="image9" width="250" height="200" onclick="changeImage(8);"></td>
+                <td><img src="" id="image10" width="250" height="200" onclick="changeImage(9);"></td>
+            </tr>
+            <br>
+        </section>
+</body>
+
+</html>
