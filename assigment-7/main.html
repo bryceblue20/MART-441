@@ -1,0 +1,124 @@
+
+<html>
+    <head>
+        <title>Assignment 7</title>
+        <script>
+var storeInArray = new Array();
+
+class objSpawn
+{
+
+    constructor(title,description,author,year,image)
+{
+        this.title=title;
+        this.description=description;
+        this.author=author;
+        this.year=year;
+        this.image=image;
+
+        
+    }
+
+toString()
+{
+    return "Title:" + this.title + '<br>' + "Description:" + this.description + '<br>'+
+    "Artist:" + this.author + '<br>'+ "Year:" + this.year +'<br>' +this.image;
+     }  
+
+get theTitle()
+{
+   return this.title;
+   }
+
+}
+ function createObjects()
+{
+   
+    var RebelArt= new objSpawn('"Plainclothesman and Residents:Watts"', 'a black and white linocut exhibiting <br> racism and state oppression', 'Sabra Field', '2019','<img src=https://www.uvm.edu/content/shared/files/styles/600/public/shared/story-photos/resist_800x400.jpg?t=rgv4z1>' );
+    var RefugeeArt = new objSpawn('"Flight"','Porcelain and wood veneer, <br> capturing the plight of refugees','Maru Hoeber','2015','<img style=width:445px;height:340px; src=https://www.healing-power-of-art.org/wp-content/uploads/2016/09/SocialInjustice-Maru-Hoeber.jpg>');
+    var ImmigrationArt = new objSpawn('"Cesen Deportacion!"','Color Screenprint on <br>woven paper,an address and protest to the <br> undocumented deportation of <br> Mexican immigrants','Rupert Garcia','1973','<img style=width:445px;height:340px; src=https://media.nga.gov/iiif/1a408a4d-005b-45c1-a002-1cca86b53061__640/full/!740,560/0/default.jpg>');
+    var LivesMatterArt = new objSpawn('"George Floyd and All Lives Matter"','A George Floyd mural in Barcelona <br> revealing the worlds desire for equality','Tim March','2020','<img style=width:445px;height:340px; src=https://s3.amazonaws.com/omeka-net/53077/archive/fullsize/ed7128b1edf5dd017fff021b7911c4f7.jpg?AWSAccessKeyId=AKIAI3ATG3OSQLO5HGKA&Expires=1678924800&Signature=nszqLHLuBLh75ITvv9SEx3RMLMQ%3D>');
+    var GenderEqualityArt = new objSpawn('"a Collection of Body Parts"','A reactionary piece about a womens <br> reaction as being seen as nothing more then a <br> collection of body parts','Alicia Tatone','2018', '<img style=width:445px;height:340px; src=https://static01.nyt.com/images/2017/12/17/magazine/mtm-readerart-01/mtm-readerart-01-superJumbo-v2.jpg?quality=75&auto=webp>');
+    var HongKongArt = new objSpawn('"Flowers of Liberty"','a beautiful reminder of <br> Hong Kongs "Umbrella Revolution"','Edward Park','2021','<img style=width:445px;height:340px; src=https://www.mlive.com/resizer/wTSZpym5eLorviQZNtvDGlRv6hQ=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/UWH6PYYBYBAWHH3EJ26PWMLUCM.jpg>');
+     storeInArray.push (RebelArt,RefugeeArt,ImmigrationArt,LivesMatterArt,GenderEqualityArt,HongKongArt);
+
+}
+
+ function findRandomObject()
+{
+
+    var randomNum = Math.floor(Math.random() * storeInArray.length);
+    document.getElementById("title").innerHTML = storeInArray[randomNum].toString();
+   }
+        </script>
+        <link rel="stylesheet" text="text/css">
+        <style>
+             @media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 600px) {
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 992px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+
+            body {
+    border:solid black 15px;
+    background-image: url(https://wallpaperaccess.com/full/6984581.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+    
+}
+
+h1 {
+    text-align:center;
+    padding-top:550px;
+    font-size:8vw;
+    font-family:'Urban Jungle';
+    color: black;
+
+}
+button {
+    border-radius: 15%; 
+    font-size:3vw;
+    font-family:'White On Black';
+}
+button:hover {
+    font-size:3.2vw;
+    background-color:gray;
+    color: white;
+    transition-duration:0.4s;
+    
+}
+
+#images {
+  max-width: 100%;
+  height: auto;
+  }
+
+a:hover {
+font-size: 4vw;
+color:black;
+transition-duration: 0.4s;
+}
+  
+        </style>
+    </head>
+    <body onload="createObjects();"> 
+      <div style="font-size:2.3vw; font-family:'Leander';padding-left:9px;" id= "title"></div>
+       <div id="images"></div>
+        <br>
+        <br>
+        <button id="btnSubmit" onclick="findRandomObject();">Cycle</button>
+        <h1>
+            Virtual <br>Art<br> Museum
+        </h1>
+    </body>
+</html>
+
+
+
