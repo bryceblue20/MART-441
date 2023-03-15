@@ -1,0 +1,485 @@
+<html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Assignment 8:Our Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+    var dogSelector = "#forest";
+    var canopy = new Array();
+    var slideShow = [
+        'https://www.nationalforesthomeowners.org/resource/resmgr/images/226.jpg',
+        'https://images.saatchiart.com/saatchi/698699/art/2462269/1532285-HSC00001-7.jpg',
+        'https://img.freepik.com/free-photo/scenic-mountains-landscape-after-rain-carpathians-ukraine_146671-18431.jpg'];
+        var cnt = slideShow.length;
+        $(function() {
+            setInterval(Slider, 5000);
+        });
+
+        function Slider() {
+        $('#imageSlide').fadeOut("slow", function() {
+        $(this).attr('src', slideShow[(slideShow.length++) % cnt]).fadeIn("slow");
+        });
+        }
+
+
+    class imageObjects{
+        constructor(selector, imagePath)
+        {
+            this.selector = selector;
+            this.imagePath = imagePath;
+        }
+    
+        get theSelector(){
+            return this.selector;
+        }
+    
+        get theImagePath(){
+            return this.imagePath;
+        }
+    
+        toString()
+        {
+            return this.selector + ":" + this.imagePath; 
+        }
+    }
+    
+    function arrayCreate()
+    {
+    
+        var forest = new imageObjects("#forest", "https://www.ecotextile.com/images/stories/2020/March/forests1.jpg");
+        canopy.push(forest);
+    
+    }
+    $(document).ready(function(){
+        arrayCreate();
+        console.log(canopy.length);
+        console.log(canopy[0].toString());
+        console.log(canopy[0].theSelector);
+        console.log(canopy[0].theImagePath);
+        
+        $("#forest2").hide();
+        $("#forest3").hide();
+        $("#forest4").hide();
+        $(".para1").hide();
+        $(".para2").hide();
+        $(".para3").hide();
+        ///
+        $("#circle").hide();
+        $("#square").hide();
+        ///
+        $("#bigcircle").hide();
+        $("#bigsquare").hide();
+        $("#bigrectangle").hide();
+        ///
+        $("#bigcircle2").hide();
+        $("#bigsquare2").hide();
+        $("#bigrectangle2").hide();
+        ///
+        $("#bigcircle3").hide();
+        $("#bigsquare3").hide();
+        $("#bigrectangle3").hide();
+
+        $(canopy[0].theSelector).attr("src", canopy[0].theImagePath);
+
+
+    
+    $("#move").click(function(){
+
+
+            $("#square").fadeIn().animate({top:740}).animate({left:2000}).animate({top:20}).animate({left:40}).animate({top:740}).animate({left:2000}).fadeOut();
+            $("#circle").delay(3000).fadeIn().animate({top:740}).animate({left:2000}).animate({top:20}).animate({left:40}).animate({top:740}).animate({left:2000}).fadeOut();
+       
+
+            $(canopy[0].theSelector).fadeOut(1200);
+            $("#forest4").fadeOut(1200);
+            $("#forest3").fadeOut(1200);
+            $("#forest2").fadeIn(1200);
+
+              setInterval(showParaOne, 2000);
+              setInterval(showParaTwo, 6000);
+              setInterval(showParaThree,11000);
+
+              $("#bigcircle").show();
+              $("#bigsquare").show();
+              $("#bigrectangle").show();
+
+              $("#bigcircle2").hide();
+              $("#bigsquare2").hide();
+              $("#bigrectangle2").hide();
+
+              $("#bigcircle3").hide();
+              $("#bigsquare3").hide();
+              $("#bigrectangle3").hide();
+
+             setInterval(shapeMove,1000)
+            });
+            
+            
+
+     $("#move2").click(function(){
+
+            $("#square").fadeIn().animate({top:740}).animate({left:2000}).animate({top:20}).animate({left:40}).animate({top:740}).animate({left:2000}).fadeOut();
+            $("#circle").delay(3000).fadeIn().animate({top:740}).animate({left:2000}).animate({top:20}).animate({left:40}).animate({top:740}).animate({left:2000}).fadeOut();
+       
+        
+            $("#forest").fadeOut();
+            $("#forest2").fadeOut(1200);
+            $("#forest4").fadeOut(1200);
+            $("#forest3").fadeIn(1200);
+
+            setInterval(showParaOne, 2000);
+            setInterval(showParaTwo, 6000);
+            setInterval(showParaThree,11000);     
+            
+            $("#bigcircle2").show();
+            $("#bigsquare2").show();
+            $("#bigrectangle2").show();
+
+            $("#bigcircle").hide();
+            $("#bigsquare").hide();
+            $("#bigrectangle").hide();
+
+            $("#bigcircle3").hide();
+            $("#bigsquare3").hide();
+            $("#bigrectangle3").hide();
+    
+            setInterval(shapeMove,1000);
+           
+
+    }); 
+
+           
+
+    $("#move3").click(function(){
+
+        $("#square").fadeIn().animate({top:740}).animate({left:2000}).animate({top:20}).animate({left:40}).animate({top:740}).animate({left:2000}).fadeOut();
+            $("#circle").delay(3000).fadeIn().animate({top:740}).animate({left:2000}).animate({top:20}).animate({left:40}).animate({top:740}).animate({left:2000}).fadeOut();
+       
+        
+            $("#forest").fadeOut();
+            $("#forest2").fadeOut(1200);
+            $("#forest3").fadeOut(1200);
+            $("#forest4").fadeIn(1200);
+
+            setInterval(showParaOne, 2000);
+            setInterval(showParaTwo, 6000);
+            setInterval(showParaThree,11000);     
+            
+            $("#bigcircle3").show();
+            $("#bigsquare3").show();
+            $("#bigrectangle3").show();
+
+            $("#bigcircle").hide();
+            $("#bigsquare").hide();
+            $("#bigrectangle").hide();
+
+            $("#bigcircle2").hide();
+            $("#bigsquare2").hide();
+            $("#bigrectangle2").hide();
+    
+            setInterval(shapeMove,1000);
+            
+    
+});
+
+    
+    });
+
+
+   function shapeMove()
+   {
+$("#bigcircle").delay(1000).animate({top:780}).animate({top:760});
+$("#bigsquare").animate({top:840}).delay(1000).animate({top:880});
+$("#bigrectangle").animate({top:880}).delay(1000).animate({top:920});
+
+$("#bigcircle2").animate({top:780}).delay(500).animate({top:740});
+$("#bigsquare2").animate({top:820}).delay(500).animate({top:860});
+$("#bigrectangle2").animate({top:1020}).delay(500).animate({top:980});
+
+$("#bigcircle3").animate({top:680}).delay(500).animate({top:640});
+$("#bigsquare3").animate({top:720}).delay(500).animate({top:760});
+$("#bigrectangle3").animate({top:820}).delay(500).animate({top:780});
+
+
+
+   }
+
+    function showParaOne()
+    {
+        $(".para1").fadeIn("slow");
+    
+    }
+
+    function showParaTwo()
+{
+       $(".para2").fadeIn("slow");
+}
+    function showParaThree()
+{
+       $(".para3").fadeIn("slow");
+}
+
+
+   
+    </script>
+    <style>
+
+        body {
+            background-color: rgb(182, 156, 124);
+        }
+
+        h1{
+            font-family:'Nature Green';
+            font-size: 5vw;
+            text-align:center;
+        }
+
+        p {
+            font-family:'The Natures';
+            font-size:2.3vw;
+        }
+
+        .flowers {
+            font-family: 'Leafs';
+            text-align: center;
+            font-size:2vw;
+        }
+
+    
+        #move {
+            font-size:2vw;
+            margin-right:20px;
+            font-family:'Chalkduster';
+            background-color:rgb(115, 71, 42);
+        }
+
+        #move:hover {
+            font-size:3vw;
+            background-color:white;
+            transition-duration:0.4s;
+        }
+
+        #move2 {
+            font-size:2.3vw;
+            margin-right:20px;
+            font-family:'Apple Chancery';
+            background-color:rgb(0, 221, 255);
+        }
+
+        #move2:hover {
+            font-size:3vw;
+            background-color:white;
+            transition-duration:0.4s;
+        }
+
+        #move3 {
+            font-size:2vw;
+            font-family:'Leander';
+            background-color:rgb(22, 67, 22);
+            
+        }
+
+        #move3:hover {
+            font-size:3vw;
+            background-color:white;
+            transition-duration:0.4s;
+        }
+        #square {
+      width: 100px;
+      height: 100px;
+      background: rgb(3, 85, 15);
+      position: absolute;
+      left: 160;
+      top: 600;
+        }
+        #circle {
+      width: 100px;
+      height: 100px;
+      background: rgb(17, 62, 35);
+      position: absolute;
+      left: 700;
+      top: 600;
+      border-radius:80%;
+        }
+
+
+        
+        #bigcircle {
+            width: 100px;
+      height: 100px;
+      background-color: rgb(65, 58, 7);
+      position: absolute;
+      left: 0;
+      top: 760;
+      border-radius:80%;
+        }
+
+        #bigsquare {
+            width: 300px;
+      height: 300px;
+      background-image: url(https://www.explorebigsky.com/wp-content/uploads/2019/09/Screen-Shot-2019-09-30-at-4.11.44-PM.jpg);
+       background-repeat: no-repeat;
+       background-position: center center;
+       background-attachment: fixed;
+       background-size: cover;
+            text-align:center;
+      position: absolute;
+      left: 100;
+      top: 840;
+        }
+        #bigrectangle {
+        width: 200px;
+      height: 70px;
+      background: rgb(167, 135, 87);
+      position: absolute;
+      left: 0;
+      top: 900;
+        }
+
+
+
+        #bigcircle2 {
+      width: 300px;
+      height: 300px;
+      background-image: url(https://images.unsplash.com/photo-1601216403432-bb958cc818b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9yZXN0JTIwcml2ZXJ8ZW58MHx8MHx8&w=1000&q=80);
+       background-repeat: repeat;
+       background-position: center center;
+       background-attachment: fixed;
+       background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 760;
+      border-radius:80%;
+        }
+
+        #bigsquare2 {
+        width: 150px;
+      height: 150px;
+      background: rgb(8, 130, 108);
+      position: absolute;
+      left: 300;
+      top: 840;
+        }
+        #bigrectangle2 {
+        width: 200px;
+      height: 70px;
+      background: rgb(23, 175, 147);
+      position: absolute;
+      left: 0;
+      top: 1000;
+        }
+
+
+
+        #bigcircle3 {
+            width:100px;
+            height:100px;
+            background: rgb(11, 62, 8);
+            position:absolute;
+            left: 0;
+            top:660;
+            border-radius: 80%;
+        }
+ 
+        #bigsquare3 {
+        width: 130px;
+      height: 130px;
+      background: rgb(8, 130, 16);
+      position: absolute;
+      left: 150;
+      top: 740;
+        }
+
+        #bigrectangle3 {
+        width: 320px;
+      height: 170px;
+      background-image: url(https://cdn.wallpapersafari.com/80/72/BkpEnI.jpg);
+       background-repeat: repeat;
+       background-position: center center;
+       background-attachment: fixed;
+       background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 800;
+        }
+
+        .textCenter {
+            text-align:center;
+        }
+        .imageCenter {
+       background-image: url(https://cdn.agriland.ie/uploads/2022/02/forestry-gfe414d641_1920-1280x720.jpg);
+       background-repeat: no-repeat;
+       background-position: center center;
+       background-attachment: fixed;
+       background-size: cover;
+            text-align:center;
+        }
+        img {
+    display: inline;
+    max-width: 100%;
+    height: auto;
+}
+
+        #imageSlide {
+            margin-right:auto;
+            margin-left:auto;
+            display: inline;
+            max-width: 70%;
+             height: auto;
+            
+        }
+
+
+    </style>
+    </head>
+    <body>
+            <div id="square"></div>
+            <div id="circle"></div>
+            
+            <div id="bigcircle"></div>
+            <div id="bigsquare"></div>
+            <div id="bigrectangle"></div>
+
+            <div id="bigcircle2"></div>
+            <div id="bigsquare2"></div>
+            <div id="bigrectangle2"></div>
+
+            <div id="bigcircle3"></div>
+            <div id="bigsquare3"></div>
+            <div id="bigrectangle3"></div>
+            <h1 class="flowers">
+                YAKYAKYAKYAKYAK
+            </h1>
+            <h1>
+                Our Nature
+            </h1>
+            <br>
+            <section style="text-align:center">
+            <button id="move">Log Cabin</button>
+            <button id="move2">River</button>
+            <button id="move3">Clearing</button>
+            </section>
+            <br>
+            <p class="imageCenter">
+            <img src="" id="forest">
+            <img src="https://live.staticflickr.com/1113/576399961_1491106f90_b.jpg" id="forest2">
+            <img src="https://images.photowall.com/products/54022/finnish-forest-river.jpg?h=699&q=85" id="forest3">
+            <img src="https://images.unsplash.com/photo-1599168215926-ebe820046d54?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9yZXN0JTIwbW91bnRhaW58ZW58MHx8MHx8&w=1000&q=80" id="forest4">
+            </p>
+            <section class="textCenter">
+            <p class="para1">From human architecture turned natural,</p>
+            <p class="para2">To the vast flowing rivers and vast mountains,</p>
+            <p class="para3">Lets respect this home!</p>
+            </section>
+            <p style="text-align:center;">
+            <img id="imageSlide" alt="" src=""/>
+            <h1 class="flowers">
+                YAKYAKYAKYAKYAK
+            </h1>
+            </p>
+           
+       
+    
+    </body>
+    </html>
