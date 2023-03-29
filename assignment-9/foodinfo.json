@@ -1,0 +1,36 @@
+{ 
+    "country" : "United States",
+    "city": "Davie",
+    "address": "4131 SW 47th Ave Ste 1403",
+    "reason_for_recall": "Recall initiated as a precautionary measure due to potential <br> risk of product contamination with Burkholderia cepacia.",
+    "product_quantity": "1,990 bottles",
+    "code_info": "UPC No. 632687615989",
+    "center_classification_date": "20161025",
+    "distribution_pattern": "FL, MI, MS, and OH",
+    "state": "FL",
+    "report_date": "20161102",
+    "classification": "Class II",
+    "openfda": {},
+    "recalling_firm": "Pharmatech LLC",
+    "recall_number": "F-0276-2017",
+    "initial_firm_notification": "Letter",
+    "product_type": "Food",
+    "event_id": "75272",
+    "more_code_info": "",
+    "recall_initiation_date": "20160808",
+    "postal_code": "33314-4036",
+    "voluntary_mandated": "Voluntary: Firm initiated",
+    "status": "Ongoing",
+    "productdistribution" : {
+        "description1" : "CytoDetox,",
+        "description2" : "Hydrolyzed Clinoptilolite Fragments,",
+        "description3" : "1 oz./30 mL, OTC Non-Sterile,",
+        "description4" : "Dietary Supplement,"
+    },
+    "sizes" : [
+        "small",
+        "medium",
+        "large",
+        "x-large"
+    ]
+}

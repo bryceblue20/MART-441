@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+     <script type="text/javascript" src="https://malsup.github.io/jquery.cycle.all.js"></script>
+     <script>
+
+    let food= { 
+    "meta": {
+      "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+      "terms": "https://open.fda.gov/terms/",
+      "license": "https://open.fda.gov/license/",
+      "last_updated": "2023-03-22",
+      "results": {
+        "skip": 0,
+        "limit": 1,
+        "total": 23667
+      }
+    },
+    "results": [
+      {
+        "country": "United States",
+        "city": "Davie",
+        "address_1": "4131 SW 47th Ave Ste 1403",
+        "reason_for_recall": "Recall initiated as a precautionary measure due to potential risk of product contamination with Burkholderia cepacia.",
+        "address_2": "",
+        "product_quantity": "1,990 bottles",
+        "code_info": "UPC No. 632687615989; Lot No. 30661601, Exp. Date 05/2018.",
+        "center_classification_date": "20161025",
+        "distribution_pattern": "FL, MI, MS, and OH.",
+        "state": "FL",
+        "product_description": "CytoDetox, Hydrolyzed Clinoptilolite Fragments, 1 oz./30 mL, OTC Non-Sterile.  Dietary supplement.",
+        "report_date": "20161102",
+        "classification": "Class II",
+        "openfda": {},
+        "recalling_firm": "Pharmatech LLC",
+        "recall_number": "F-0276-2017",
+        "initial_firm_notification": "Letter",
+        "product_type": "Food",
+        "event_id": "75272",
+        "more_code_info": "",
+        "recall_initiation_date": "20160808",
+        "postal_code": "33314-4036",
+        "voluntary_mandated": "Voluntary: Firm initiated",
+        "status": "Ongoing"
+      }
+    ]
+  }
+        
+    
+$(document).ready(function () {
+    $(function() {  
+        $('#slide').cycle({
+		fx: 'turnDown',
+        delay: -5000
+        
+	});    
+    });
+    $("#slide").hide().delay(2000).fadeIn();
+    $("#foodInformation").hide();
+    $("#foodInformation2").hide();
+    $("#foodInformation3").hide();
+    $("#foodInformation4").hide();
+    $("#foodInformation5").hide();
+
+$("#button").click(function () {
+
+    
+         $('#warnings').cycle({ 
+    fx:    'curtainX', 
+    sync:  false, 
+    delay: -1000 
+ });
+
+
+    $("#foodInformation").hide().fadeIn(1000).html("Disclaimer:" + food.meta.disclaimer);
+    $("#foodInformation").delay(8000).fadeOut(1000).html;
+    $("#foodInformation2").delay(2000).fadeIn(1000).html("Terms:" + food.meta.terms);
+    $("#foodInformation3").delay(3500).fadeIn(1000).html("License:" + food.meta.license);
+    $("#foodInformation4").delay(6000).fadeIn(1000).html("Last Updated:" + food.meta.last_updated);
+    $("#foodInformation5").delay(8000).fadeIn(1000).html("Results:<br>Skip:" + food.meta.results.skip + "<br>Limit:" + 
+    food.meta.results.limit + "<br>Total:" + food.meta.results.total);
+    //$("#bikeInformation3").delay(4000).fadeIn(1000).html("Sizes Available:" + food.meta.terms);
+    //$("#bikeInformation3").delay(2000).fadeOut();
+   // $("#bikeInformation").delay(6000).fadeIn(1000).html("Sizes Available:" + food.meta.license);
+      
+}); 
+});      
+
+$("#recall").click(function () {
+
+
+    $('#warnings').cycle({ 
+    fx:    'curtainX', 
+    sync:  false, 
+    delay: -1000 
+ });
+ 
+    $("#recallInformation").show();
+    $("#foodInformation").fadeOut();
+    $("#foodInformation2").fadeOut();
+    $("#foodInformation3").fadeOut();
+    $("#foodInformation4").fadeOut();
+    $("#foodInformation5").fadeOut();
+
+});
+
+
+
+        function showRecallInfo() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                var food = JSON.parse(this.responseText);
+                document.getElementById("recallInformation").innerHTML = "Country:" + food.country 
+                + "<br>City:" + food.city + "<br>Address:" + food.address + "<br>Reason for Recall:<br>" 
+                + food.reason_for_recall + "<br>Product Quantity:" +
+                food.product_quantity + "<br>Code Info:" + food.code_info + "<br>Recalling Firm:" + food.recalling_firm + "<br>Recalling Number:" + food.recall_number + 
+                "<br>Postal Code:" + food.postal_code + "<br><br>Product Distribution:<br>" + food.productdistribution.description1 + "<br>" + food.productdistribution.description2
+                + "<br>" + food.productdistribution.description3 + "<br>" + food.productdistribution.description4;
+                }
+            };
+            xhttp.open("GET", "food.json", true);
+            xhttp.send();
+        }
+     </script>
+</head>
+<style>
+
+
+    .image1 {
+width:600px;
+height:400px
+    }
+
+    .image2 {
+        width:600px;
+height:400px
+    }
+
+    .image3 {
+        width:600px;
+height:400px
+    }
+#slide {
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: rgba(148, 21, 21, 0.56) 0px 22px 70px 4px;
+}
+    #foodInformation {
+        text-align:center;
+        color:white;
+        font-size:20px;
+
+    }
+
+    #foodInformation2 {
+        text-align:center;
+        color:white;
+        font-size:20px;
+    }
+
+    #foodInformation3 {
+        text-align:center;
+        color:white;
+        font-size:20px;
+    }
+
+    #foodInformation4 {
+        text-align:center;
+        color:white;
+        font-size:20px;
+    }
+
+    #foodInformation5 {
+        text-align:center;
+        color:white;
+        font-size:20px;
+    }
+
+    .header {
+background-image: url(https://delauro.house.gov/sites/evo-subsites/delauro.house.gov/files/featured_image/issues/FDA-1250x650.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+    
+
+    #warnings {
+        margin-left:auto;
+        margin-right:auto;
+    }
+   button {
+    font-size:1.7vw;
+    margin-top:15px;
+    font-family:Helvetica, sans-serif
+   }
+   button:hover {
+     transition-duration:0.4s;
+     font-size:1.9vw;
+     color:white;
+     background-color:red;
+     box-shadow: rgba(255, 8, 0, 0.699) 5px 5px, rgba(177, 25, 25, 0.96) 10px 10px, rgb(113, 13, 13) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px;
+
+   }
+   button:active {
+     transition-duration:0.4s;
+     font-size:1.9vw;
+     color:white;
+     background-color:red;
+   }
+    #btnGroup {
+        text-align:center;
+    }
+    #recallInformation {
+        text-align:center;
+        border:solid black;
+        font-size:25px;
+        color:rgb(188, 188, 188);
+        font-family:'Monaco';
+        
+    }
+    
+    .infoBody {
+    background-color: rgb(98, 96, 96);
+    }
+  
+table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+        }
+  #body {
+    color:grey;
+  }
+</style>
+<body style="background-color:gray;">
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Food_and_Drug_Administration_logo.svg/1280px-Food_and_Drug_Administration_logo.svg.png"         
+        style=
+        "display: inline;
+        width:600px;
+        max-width: 100%;
+         height: auto;">
+    </div>
+    <div style="font-size:70px;
+    font-family:Phosphate; text-align:center; color:rgb(188, 26, 26);">Product Recall
+     <div style="text-align:center; font-size: 40px; font-family: Phosphate; color: rgb(188, 26, 26)">Cytodetox</div>
+    <div id="warnings">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Warning.svg/1200px-Warning.svg.png" width="70px" height="70px";>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Achtung.svg/628px-Achtung.svg.png" width="70px" height="70px";>
+    </div>
+</div>
+ 
+    <div id="btnGroup">
+     <button id="button">Disclaimer</button><br>
+     <button id="recall" onclick="showRecallInfo();">Recall Info</button><br> 
+    </div>
+    <p style="text-align:center">
+        <div id="slide">
+            <img class="image1" src="https://moffitt.org/media/11067/blood-pressure-drug-recall-lg.jpg?crop=0,0,0,0&cropmode=percentage&width=1440&height=650&rnd=132465255830000000"/>
+            <img class="image2" src="https://miro.medium.com/v2/resize:fit:1400/0*nszz0VpyCKx0kRNk.jpg"/>
+            <img class="image3" src="https://projectnutrition.com/wp-content/uploads/2020/04/CytoDetox18-Single.jpg"/>
+         </div>
+    </p>
+<section class="infoBody">
+    <div id="recallInformation"></div>
+    <div id="foodInformation"></div>
+    <div id="foodInformation2"></div>
+    <div id="foodInformation3"></div>
+    <div id="foodInformation4"></div>
+    <div id="foodInformation5"></div>
+</section>
+</body>
+
+</html>
