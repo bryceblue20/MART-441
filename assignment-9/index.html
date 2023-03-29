@@ -57,6 +57,7 @@ $(document).ready(function () {
         
 	});    
     });
+    $("#warnings").hide();
     $("#slide").hide().delay(2000).fadeIn();
     $("#foodInformation").hide();
     $("#foodInformation2").hide();
@@ -66,7 +67,7 @@ $(document).ready(function () {
 
 $("#button").click(function () {
 
-    
+    $('#warnings').fadeIn();
          $('#warnings').cycle({ 
     fx:    'curtainX', 
     sync:  false, 
@@ -90,13 +91,13 @@ $("#button").click(function () {
 
 $("#recall").click(function () {
 
-
+    $('#warnings').fadeIn();
     $('#warnings').cycle({ 
     fx:    'curtainX', 
     sync:  false, 
     delay: -1000 
  });
- 
+
     $("#recallInformation").show();
     $("#foodInformation").fadeOut();
     $("#foodInformation2").fadeOut();
@@ -256,11 +257,9 @@ table,
         <img style="margin-right:auto; display:inline; max-width: 40%; height: auto;" src="recall.png">
     </p>
     <div style="text-align:center; font-size: 40px; color: rgb(188, 26, 26)">Cytodetox</div>
-    <div>
-        <p style="text-align:center">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Warning.svg/1200px-Warning.svg.png" width="70px" height="70px";>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Achtung.svg/628px-Achtung.svg.png" width="70px" height="70px";>
-    </p>
+    <div id="warnings">
+        <img style="margin-left:auto;margin-right:auto;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Warning.svg/1200px-Warning.svg.png" width="70px" height="70px";>
+        <img style="margin-left:auto;margin-right:auto;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Achtung.svg/628px-Achtung.svg.png" width="70px" height="70px";>
     </div>
 </div>
  
@@ -286,3 +285,4 @@ table,
 </body>
 
 </html>
+
