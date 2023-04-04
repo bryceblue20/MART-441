@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <title>Canvas</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/squareclass.js"></script>
+    <style>
+
+    #mainBG {
+background-image: url("https://news.gsu.edu/files/2019/05/iStock-516189065.jpg");
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+    }
+    
+        #myCanvas {
+    max-width: 70%;
+height: auto;
+margin-top:10px;
+  border: black;
+  border-style: solid;
+  border-width: 15px;
+  background-image:url("https://sites.breakingmedia.com/uploads/sites/3/2022/11/iStock-1333071678-e1669760260420.jpg");
+}
+
+#mainmessage {
+    text-align:center;
+    font-size:2.4vw;
+    color:white;
+    padding-top:0%;
+    padding-bottom:0%;
+    margin-top:0%;
+    margin-bottom:0%;
+    font-family: arial, sans-serif;
+}
+
+#message {
+    text-align:center;
+    font-size:2.4vw;
+    color:red;
+    font-family: arial, sans-serif;
+}
+
+#message2 {
+    text-align:center;
+    font-size:2.4vw;
+    color:white;
+    font-family: arial, sans-serif;
+}
+
+#restart {
+   font-size:2.5vw;
+   font-family: arial, sans-serif;
+   border:60%;
+}
+
+#restart:hover{
+    font-size:2.7vw;
+    font-family: arial, sans-serif;
+    background-color:black;
+    color:white;
+    box-shadow: rgba(230, 229, 230, 0.4) 0px 5px, rgba(196, 194, 195, 0.3) 0px 10px, rgba(124, 123, 124, 0.2) 0px 15px, rgba(77, 74, 76, 0.1) 0px 20px, rgba(40, 38, 39, 0.05) 0px 25px;
+transition-duration:0.4s;
+}
+
+#showInstructions {
+    font-size:1.2vw;
+}
+#showInstructions:hover {
+font-size: 1.4vw;
+box-shadow: rgba(230, 229, 230, 0.4) 0px 5px, rgba(196, 194, 195, 0.3) 0px 10px, rgba(124, 123, 124, 0.2) 0px 15px, rgba(77, 74, 76, 0.1) 0px 20px, rgba(40, 38, 39, 0.05) 0px 25px;
+transition-duration:0.4s;
+background-color:black;
+color:white;
+}
+
+#showInstructions:active {
+font-size:1.4vw;
+background-color:black;
+color:white;
+}
+
+
+    </style>
+</head>
+
+<body id="mainBG">
+    <p style="text-align:center">
+    <audio id="song" src="tunetank.com_4211_ancient-sky_by_victorwayne.mp3" controls="controls">
+    </audio>
+    </p>
+
+    <p style="text-align:center">
+    <img id="controls"; src="instructions.jpg"></div>
+</p>
+<p style="text-align:center">
+<button id="showInstructions">instructions</button>
+</p>
+    <p style="text-align:center">
+        <a href="file:///Users/coralianblue/Desktop/MART%20441/MART-441/assignment-10/index.html">
+        <button id="restart">Restart</button></a>
+    </p>
+    <p style="text-align:center">
+    <canvas id="myCanvas" height="400" width="750"></canvas>
+</p> 
+<p style="text-align:center";>
+<img id="title" style= "margin-left:auto; margin-right: auto;  max-width: 30%;
+height: auto;"
+src="10-title.png">
+<div id="mainmessage">Use your spaceship to travel to the space station. <br>
+    but beware of the mysterious alien, and careful of contact! </p>
+    <div id="message">Watch Out! The enemy has hacked your vision!</p>
+</p>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
