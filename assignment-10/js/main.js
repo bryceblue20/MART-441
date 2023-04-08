@@ -13,7 +13,7 @@ var square3;
 
 createtheSquares();
 placeNewSquares();
-setInterval(movetheGreenSquare, 400);
+// setInterval(movetheGreenSquare, 400);
 
 function createtheSquares() {
     square1 = new Square(x, y, 20, 70, "blue");
@@ -21,11 +21,11 @@ function createtheSquares() {
     square3 = new Square(x3, y3, 70, 70, "red");
 }
 
-function movetheGreenSquare() {
+//function movetheGreenSquare() {
 
-    square2.setX(Math.floor(Math.random() * canvas.width));
-    square2.setY(Math.floor(Math.random() * canvas.height));
-    placeNewSquares();
+   // square2.setX(Math.floor(Math.random() * canvas.width));
+   // square2.setY(Math.floor(Math.random() * canvas.height));
+   // placeNewSquares();
 }
 
  //replaces and then draws new squares when movement based function is called
@@ -47,6 +47,7 @@ $(document).ready(function () {
     $("#message2").hide();
     $("#restart").hide();
     $("#controls").hide();
+    setInterval(greenMove,1000);
 });
     $(this).keypress(function (event) {
         getKey(event);
@@ -162,3 +163,8 @@ function touchActive2(object1, object3) {
         (object1.x > (object3.x + object3.width))
     );
 }
+
+function greenMove(){
+$("square2").delay(1000).animate({top:780}).animate({top:760});
+}
+
