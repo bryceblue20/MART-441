@@ -42,6 +42,7 @@ function placeNewSquares() {
 }
 
 $(document).ready(function () {
+    if(){}
     $("#message").hide();
     $("#message2").hide();
     $("#restart").hide();
@@ -102,8 +103,6 @@ $("#controls").fadeOut();
 
     
 }
-
-if(){}
 
 function moveUp() {
     square1.setY(square1.theY - 10);
