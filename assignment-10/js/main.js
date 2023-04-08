@@ -42,7 +42,6 @@ function placeNewSquares() {
 }
 
 $(document).ready(function () {
-    if(){}
     $("#message").hide();
     $("#message2").hide();
     $("#restart").hide();
@@ -161,5 +160,5 @@ function touchActive2(object1, object3) {
         (object1.x > (object3.x + object3.width))
     );
 }
-
+if(){}
 
