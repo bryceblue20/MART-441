@@ -22,7 +22,8 @@ function createtheSquares() {
 }
 
 function movetheGreenSquare() {
-
+ square2.setX(Math.floor(Math.random() * canvas.width));
+ square2.setY(Math.floor(Math.random() * canvas.height));
     placeNewSquares();
 }
 
@@ -162,7 +163,4 @@ function touchActive2(object1, object3) {
     );
 }
 
-function greenMove(){
-$("square2").delay(1000).animate({top:780}).animate({top:760});
-}
 
