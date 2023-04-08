@@ -160,5 +160,5 @@ function touchActive2(object1, object3) {
         (object1.x > (object3.x + object3.width))
     );
 }
-if(){}
+
 
