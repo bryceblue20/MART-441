@@ -46,7 +46,6 @@ $(document).ready(function () {
     $("#message2").hide();
     $("#restart").hide();
     $("#controls").hide();
-    greenMove();
 });
     $(this).keypress(function (event) {
         getKey(event);
