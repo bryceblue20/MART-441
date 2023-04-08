@@ -9,7 +9,7 @@ var y3= 350;
 var square1;
 var square2;
 var square3;
-if (){};
+
 
 createtheSquares();
 placeNewSquares();
@@ -103,6 +103,7 @@ $("#controls").fadeOut();
     
 }
 
+if(){}
 
 function moveUp() {
     square1.setY(square1.theY - 10);
