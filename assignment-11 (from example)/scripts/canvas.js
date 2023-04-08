@@ -8,12 +8,18 @@ var questions;
 var squareArray = [];
 var lives = 3;
 $(document).ready(function(){
-    
+    $("#gameOver").hide();
     setup();  
     
     $(this).keypress(function(event){
         getKey(event);
+
+    if (lives == "0"){
+        document.getElementById('myCanvas').style.display = 'none'
+        $("#gameOver").show();
+     }
         
+
     });
 });
 
@@ -135,6 +141,9 @@ function drawSquare()
     ctx.fillText("Lives: " + lives, 10, 50);    
 
 }
+
+
+
 
 function hasCollided(object1, object2) {
     return !(
