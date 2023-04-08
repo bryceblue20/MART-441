@@ -9,7 +9,7 @@ var y3= 350;
 var square1;
 var square2;
 var square3;
-
+if (){};
 
 createtheSquares();
 placeNewSquares();
