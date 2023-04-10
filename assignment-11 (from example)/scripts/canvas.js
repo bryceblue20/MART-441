@@ -20,7 +20,7 @@ $(document).ready(function(){
         
     
     if (lives == "2"){
-        data.squares[i].x-=500;
+        squareArray[i].x-=500;
      }
         
 
@@ -37,7 +37,7 @@ function setup()
     // create two objects
     square1 = new Square(100,100,50,50,"#0000FF");
     square2 = new Square(400,400,100,100,"#00FF00");
-    $.getJSON("information.json", function(data) {
+    square3 = $.getJSON("information.json", function(data) {
         for(var i = 0; i < data.squares.length; i++)
         {
             squareArray.push(new Square(data.squares[i].x,data.squares[i].y, data.squares[i].h, data.squares[i].w, data.squares[i].color));
