@@ -85,7 +85,7 @@ function getKey(event)
     if(test || test2)
     {
         lives++;
-     
+    square2.opacity= 0;
         if(direction == "left")
         {
             moveRight();
