@@ -85,7 +85,7 @@ function getKey(event)
     if(test || test2)
     {
         lives++;
-        square2.hide(); 
+      
    
         if(direction == "left")
         {
@@ -107,6 +107,10 @@ function getKey(event)
     }
     drawSquare(); 
     
+}
+
+if (test || test2) {
+square2.hide();
 }
 
 function moveUp()
