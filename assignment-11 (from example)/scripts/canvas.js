@@ -18,6 +18,11 @@ $(document).ready(function(){
         square2.x-=500;
      }
         
+    
+    if (lives == "2"){
+        data.squares[i].x-=500;
+     }
+        
 
     });
 });
