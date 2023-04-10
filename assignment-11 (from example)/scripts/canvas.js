@@ -8,12 +8,13 @@ var questions;
 var squareArray = [];
 var lives = 0;
 $(document).ready(function(){
-    
+    $("#gameOver").hide();
     setup();  
     
     $(this).keypress(function(event){
         getKey(event);
-        
+    
+
     });
 });
 
@@ -27,7 +28,7 @@ function setup()
     // create two objects
     square1 = new Square(100,100,50,50,"#0000FF");
     square2 = new Square(400,400,100,100,"#00FF00");
-    $.getJSON("information.json", function(data) {
+    square3 = $.getJSON("information.json", function(data) {
         for(var i = 0; i < data.squares.length; i++)
         {
             squareArray.push(new Square(data.squares[i].x,data.squares[i].y, data.squares[i].h, data.squares[i].w, data.squares[i].color));
@@ -64,15 +65,18 @@ function getKey(event)
         direction = "right";
     }
     var test = hasCollided(square1,square2);
+  
     for(var i = 0; i < squareArray.length; i++)
     {
-    var test2 = hasCollided(square1,squareArray[0]);
-    } 
- 
+
+     var test2 = hasCollided(square1,squareArray[0]);
+        
+    }
     if(test)
     {
         lives++;
-        square2.x-=600;
+   square2.x-=600;
+   
         if(direction == "left")
         {
             moveRight();
@@ -92,9 +96,31 @@ function getKey(event)
     
     }
     drawSquare(); 
+    if(test2)
+    {
+        lives++;
+   squareArray[0].x-=600;
+   
+        if(direction == "left")
+        {
+            moveRight();
+        }
+        else if(direction == "right")
+        {
+            moveLeft();
+        }
+        else if(direction == "up")
+        {
+            moveDown();
+        }
+        else if(direction == "down")
+        {
+            moveUp();
+        }
     
+    }
+    drawSquare(); 
 }
-
 function moveUp()
 {
     square1.y-=10;
@@ -130,6 +156,9 @@ function drawSquare()
 
 }
 
+
+
+
 function hasCollided(object1, object2) {
     return !(
         ((object1.y + object1.height) < (object2.y)) ||
@@ -137,7 +166,7 @@ function hasCollided(object1, object2) {
         ((object1.x + object1.width) < object2.x) ||
         (object1.x > (object2.x + object2.width))
     );
-}
+    }
 
 
 
