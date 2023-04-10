@@ -65,12 +65,7 @@ function getKey(event)
     }
     var test = hasCollided(square1,square2);
     
-    for(var i = 0; i < squareArray.length; i++)
-    {
-
-     var test2 = hasCollided(square1,squareArray[i]);
-        
-    }
+ 
     if(test)
     {
         lives++;
