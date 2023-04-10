@@ -85,6 +85,7 @@ function getKey(event)
     if(test || test2)
     {
         lives++;
+        delete square2;
     
 ctx.clearRect(square2.x,square2.y, square2.width, square2.height, square2.mainColor);
         if(direction == "left")
