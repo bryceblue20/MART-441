@@ -79,7 +79,7 @@ function getKey(event)
     if(test)
     {
         lives++;
-        square2.x-=600
+        square2.x-=600;
         if(direction == "left")
         {
             moveRight();
