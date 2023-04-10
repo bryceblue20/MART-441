@@ -70,6 +70,7 @@ function getKey(event)
     {
 
      var test2 = hasCollided(square1,squareArray[0]);
+     var test3 = hasCollided(square1,squareArray[1]);
         
     }
     if(test)
@@ -100,6 +101,31 @@ function getKey(event)
     {
         lives++;
    squareArray[0].x-=600;
+   
+        if(direction == "left")
+        {
+            moveRight();
+        }
+        else if(direction == "right")
+        {
+            moveLeft();
+        }
+        else if(direction == "up")
+        {
+            moveDown();
+        }
+        else if(direction == "down")
+        {
+            moveUp();
+        }
+    
+    }
+    drawSquare(); 
+}
+ if(test3)
+    {
+        lives++;
+   squareArray[1].x-=600;
    
         if(direction == "left")
         {
