@@ -6,7 +6,7 @@ var square1, square2;
 var direction;
 var questions;
 var squareArray = [];
-var lives = 3;
+var lives = 0;
 $(document).ready(function(){
     $("#gameOver").hide();
     setup();  
