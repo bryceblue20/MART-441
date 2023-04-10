@@ -85,7 +85,7 @@ function getKey(event)
     if(test || test2)
     {
         lives++;
-        
+        ctx=canvas.removeContext();
    
         if(direction == "left")
         {
