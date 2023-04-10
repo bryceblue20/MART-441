@@ -14,7 +14,7 @@ $(document).ready(function(){
     $(this).keypress(function(event){
         getKey(event);
 
-    if (lives == "0"){
+    if (lives == "4"){
         document.getElementById('myCanvas').style.display = 'none'
         $("#gameOver").show();
      }
@@ -84,8 +84,8 @@ function getKey(event)
     }
     if(test || test2)
     {
-        lives--;
-        square2.remove();
+        lives++;
+     
         if(direction == "left")
         {
             moveRight();
