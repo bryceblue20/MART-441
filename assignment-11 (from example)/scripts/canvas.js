@@ -86,7 +86,7 @@ function getKey(event)
     {
         lives++;
     
-context.clearRect(square2.x,square2.y, square2.width, square2.height, square2.mainColor);
+ctx.clearRect(square2.x,square2.y, square2.width, square2.height, square2.mainColor);
         if(direction == "left")
         {
             moveRight();
