@@ -76,9 +76,10 @@ function getKey(event)
         
         //console.log(test2);
     }
-    if(test || test2)
+    if(test)
     {
-        lives--;
+        lives++;
+        square2.x-=600
         if(direction == "left")
         {
             moveRight();
