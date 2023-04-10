@@ -85,7 +85,7 @@ function getKey(event)
     if(test || test2)
     {
         lives++;
-        delete square2;
+        
    
         if(direction == "left")
         {
