@@ -6,7 +6,7 @@ var square1, square2;
 var direction;
 var questions;
 var squareArray = [];
-var lives = 0;
+var lives = 3;
 $(document).ready(function(){
     
     setup();  
@@ -64,19 +64,21 @@ function getKey(event)
         direction = "right";
     }
     var test = hasCollided(square1,square2);
-    
+    var test2 = false;
     for(var i = 0; i < squareArray.length; i++)
     {
 
-    var test2 = hasCollided(square1,squareArray[0]);
+        test2 = hasCollided(square1,squareArray[i]);
+        if(test2 == true)
+        {
+            break;
+        }
         
-        
-       
+        //console.log(test2);
     }
-    if(test)
+    if(test || test2)
     {
-        lives++;
-        square2.x-=600;
+        lives--;
         if(direction == "left")
         {
             moveRight();
@@ -99,31 +101,6 @@ function getKey(event)
     
 }
 
- if(test2)
-    {
-        lives++;
-        squareArray[0].x-=600;
-        if(direction == "left")
-        {
-            moveRight();
-        }
-        else if(direction == "right")
-        {
-            moveLeft();
-        }
-        else if(direction == "up")
-        {
-            moveDown();
-        }
-        else if(direction == "down")
-        {
-            moveUp();
-        }
-    
-    }
-    drawSquare(); 
-    
-}
 function moveUp()
 {
     square1.y-=10;
