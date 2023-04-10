@@ -94,31 +94,7 @@ function getKey(event)
     drawSquare(); 
     
 }
- if(test2)
-    {
-        lives++;
-        squareArray[0].x-=600;
-        if(direction == "left")
-        {
-            moveRight();
-        }
-        else if(direction == "right")
-        {
-            moveLeft();
-        }
-        else if(direction == "up")
-        {
-            moveDown();
-        }
-        else if(direction == "down")
-        {
-            moveUp();
-        }
-    
-    }
-    drawSquare(); 
-    
-}
+
 function moveUp()
 {
     square1.y-=10;
