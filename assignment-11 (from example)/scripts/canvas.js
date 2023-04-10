@@ -20,7 +20,7 @@ $(document).ready(function(){
         
     
     if (lives == "2"){
-        squareArray[1].hide();
+        squareArray[i].x-=600;
      }
         
 
