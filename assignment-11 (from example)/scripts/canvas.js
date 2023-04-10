@@ -1,6 +1,4 @@
 
- 
-
 var canvas;
 var ctx;
 var x = 50;
