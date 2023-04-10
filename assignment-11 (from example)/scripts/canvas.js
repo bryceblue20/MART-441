@@ -76,7 +76,7 @@ function getKey(event)
         
         //console.log(test2);
     }
-    if(test)
+    if(test || test2)
     {
         lives++;
         square2.x-=600;
