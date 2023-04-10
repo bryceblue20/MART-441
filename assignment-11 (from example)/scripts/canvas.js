@@ -13,16 +13,7 @@ $(document).ready(function(){
     
     $(this).keypress(function(event){
         getKey(event);
-
-    if (lives == "1"){
-        square2.x-=500;
-     }
-        
     
-    if (lives == "2"){
-        squareArray[i].x-=600;
-     }
-        
 
     });
 });
@@ -74,22 +65,17 @@ function getKey(event)
         direction = "right";
     }
     var test = hasCollided(square1,square2);
-    var test2 = false;
+  
     for(var i = 0; i < squareArray.length; i++)
     {
 
-        test2 = hasCollided(square1,squareArray[i]);
-        if(test2 == true)
-        {
-            break;
-        }
+     var test2 = hasCollided(square1,squareArray[0]);
         
-        //console.log(test2);
     }
-    if(test || test2)
+    if(test)
     {
         lives++;
-   
+   square2.x-=600;
    
         if(direction == "left")
         {
@@ -110,7 +96,30 @@ function getKey(event)
     
     }
     drawSquare(); 
+    if(test2)
+    {
+        lives++;
+   squareArray[0].x-=600;
+   
+        if(direction == "left")
+        {
+            moveRight();
+        }
+        else if(direction == "right")
+        {
+            moveLeft();
+        }
+        else if(direction == "up")
+        {
+            moveDown();
+        }
+        else if(direction == "down")
+        {
+            moveUp();
+        }
     
+    }
+    drawSquare(); 
 }
 function moveUp()
 {
