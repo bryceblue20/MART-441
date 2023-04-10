@@ -111,7 +111,7 @@ function getKey(event)
 
 function clear()
 {
-ctx.clearRect(0,0,800,600);
+square2.x-=500;
 }
 function moveUp()
 {
