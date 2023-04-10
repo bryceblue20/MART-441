@@ -85,7 +85,8 @@ function getKey(event)
     if(test || test2)
     {
         lives++;
-    square2.opacity= 0;
+    
+context.clearRect(square2.x,square2.y, square2.width, square2.height, square2.mainColor);
         if(direction == "left")
         {
             moveRight();
