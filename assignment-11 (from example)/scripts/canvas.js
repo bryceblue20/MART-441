@@ -85,7 +85,7 @@ function getKey(event)
     if(test || test2)
     {
         lives++;
-       ctx.clearRect(0,0,800,600);
+       clear();
    
         if(direction == "left")
         {
@@ -109,7 +109,10 @@ function getKey(event)
     
 }
 
-
+function clear()
+{
+ctx.clearRect(0,0,800,600);
+}
 function moveUp()
 {
     square1.y-=10;
