@@ -14,9 +14,8 @@ $(document).ready(function(){
     $(this).keypress(function(event){
         getKey(event);
 
-    if (lives == "4"){
-        document.getElementById('myCanvas').style.display = 'none'
-        $("#gameOver").show();
+    if (lives == "1"){
+        square2.x-=500;
      }
         
 
@@ -85,7 +84,7 @@ function getKey(event)
     if(test || test2)
     {
         lives++;
-       clear();
+   
    
         if(direction == "left")
         {
@@ -107,11 +106,6 @@ function getKey(event)
     }
     drawSquare(); 
     
-}
-
-function clear()
-{
-square2.x-=500;
 }
 function moveUp()
 {
