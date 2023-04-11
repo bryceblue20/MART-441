@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>Canvas</title>
+    </head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="scripts/square.js"></script>
+    <script src="scripts/canvas.js"></script>
+    <style>
+
+
+
+        body {
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/A_closer_view_of_the_cave_entrance_%2835910288782%29.jpg");
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+        }
+        #myCanvas{
+            border:black;
+            border-style: solid;
+            border-width: 7px;
+            background-image: url("https://cdnb.artstation.com/p/assets/images/images/019/585/585/large/ritesh-pawar-caveaa.jpg?1564145923");
+background-size:900px;
+max-width: 60%;
+  height: auto;
+
+        }
+
+        #title {
+            display: inline;
+  max-width: 70%;
+  height: auto;
+  padding-top:3%;
+        }
+
+        #showInstructions {
+            font-size:2vw;
+        }
+
+        #showInstructions:hover {
+            font-size:2.2vw;
+            background:black;
+            color:white;
+            transition-duration:0.4s;
+            border-radius: 20%;
+        }
+
+        #restart {
+            font-size:2vw;
+        }
+
+        #restart:hover {
+            font-size:2.2vw;
+            background:black;
+            color:white;
+            transition-duration:0.4s;
+            border-radius: 20%;
+        }
+        
+
+       #controls {
+        display: inline;
+  max-width: 60%;
+  height: auto;
+  padding-top:3%;
+       }
+
+       #about {
+        font-size:2vw;
+        color:white;
+        text-align:center;
+       }
+
+    #exitImage {
+        display: inline;
+  max-width: 40%;
+  height: auto;
+  padding-top:3%;
+    }
+       #completed{
+text-align:center;
+font-size:2vw;
+color:white;
+       }
+
+    #key {
+        display: inline;
+  max-width: 20%;
+  height: auto;
+  padding-top:3%;
+    }
+
+    #outOfCave {
+        font-size:2.4vw;
+        font-style: italic;
+        color:white;
+        text-align:center;
+    }
+
+    </style>
+    <body>
+        <p style="text-align:center">
+        <canvas id="myCanvas" height="600" width="800"></canvas>
+    </p>
+    <p style="text-align:center">
+        <img id="exitImage" src="https://daily.jstor.org/wp-content/uploads/2016/10/Moving_Forest_1050_700.jpg">
+    </p>
+<p style="text-align:center;">
+    <img id="title" src="11-title.png">
+</p>
+<p style></p>
+<p style="text-align:center">
+    <img id="controls"; src="11-instructions.jpg"></div>
+</p>
+<p style="text-align:center">
+<div id="about">
+    You are trapped inside a dark cave, and 10 key fragments lay all over the walls.<br>
+    can you find them all?
+</div>
+<div id="outOfCave">
+    You have successfully found your way <br>
+    out of the cave!
+</div>
+<br>
+<br>
+<div id="completed">
+    You were able to find every piece!<br>
+    Travel to the top right to use the key!
+</div>
+<p style="text-align:center">
+<img id="key" src="key.jpeg">
+</p>
+<p style="text-align:center">
+<button id="showInstructions">instructions</button>
+</p>  
+<p style="text-align:center">
+       
+    <button onClick="window.location.reload();" id="restart">Restart</button></a>
+</p>
+    </body>
+</html>
