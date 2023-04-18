@@ -17,7 +17,7 @@ var config = {
         update: update
     }
 };
-
+let keyBar;
 var player;
 var stars;
 var bombs;
@@ -42,13 +42,13 @@ function preload() {
 
 function create() {
     //  A simple background for our game
-  
+  keyBar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
     //  The platforms group contains the ground and the 2 ledges we can jump on
     platforms = this.physics.add.staticGroup();
 
     //  Here we create the ground.
-    //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
+    //  Scale it to fit the width of the game (the original sprite  is 400x32 in size)
     platforms.create(400, 568, 'ground').setScale(2).refreshBody();
 
     //  Now let's create some ledges
@@ -152,7 +152,7 @@ function update() {
         player.anims.play('turn');
     }
 
-    if (cursors.up.isDown && player.body.touching.down) {
+    if (keyBar.isDown && player.body.touching.down) {
         player.setVelocityY(-330);
     }
 }
