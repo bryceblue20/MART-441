@@ -65,8 +65,7 @@ function create() {
 
     //  A simple background for our game
     this.add.image(400, 300, 'natureworld');
-    
-   
+    keyBar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
     //  The platforms group contains the ground and the 2 ledges we can jump on
 
     platforms = this.physics.add.staticGroup();
@@ -190,7 +189,7 @@ function update() {
         player.anims.play('turn');
     }
 
-    if (cursors.up.isDown && player.body.touching.down) {
+    if (keyBar.isDown && player.body.touching.down) {
         player.setVelocityY(-310);
     }
 }
@@ -318,6 +317,4 @@ function collectDiamond(player, master) {
     master.disableBody(true, true);
     this.add.image(400, 150, 'masterbadge');
 }
-
-
 
