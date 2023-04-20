@@ -19,8 +19,8 @@ var config = {
 };
 
 var player;
-var stars;
-var bombs;
+var collectibles;
+var guardians;
 var platforms;
 var cursors;
 var third;
@@ -33,12 +33,8 @@ var trophies = 0;
 var level = 1;
 var gameOver = false;
 var scoreText;
-var game;
 
-$(document).ready(function() {
-    game = new Phaser.Game(config);
-});
-  
+var game = new Phaser.Game(config);
 
 
 function preload() {
@@ -46,8 +42,8 @@ function preload() {
     this.load.image('natureworld','bg.png');
     this.load.image('ground', 'platform.png');
     this.load.image('floor', 'groundlayer.png');
-    this.load.image('star', 'gemBlue.png');
-    this.load.image('bomb', 'spinner_spin.png');
+    this.load.image('collectible', 'gemBlue.png');
+    this.load.image('guardian', 'spinner_spin.png');
     this.load.image('bronze', 'bronze.png');
     this.load.image('rookiebadge', 'rookiebadge.png');
     this.load.image('silver', 'silver.png')
@@ -58,7 +54,7 @@ function preload() {
     this.load.image('expertbadge', 'expertbadge.png');
     this.load.image('diamond', 'diamond.png');
     this.load.image('masterbadge', 'masterbadge.png');
-    this.load.spritesheet('dude', 'assets/dude.png', {
+    this.load.spritesheet('dude', '/assets/dude.png', {
         frameWidth: 32,
         frameHeight: 48
     });
@@ -105,12 +101,11 @@ function create() {
 
     this.anims.create({
         key: 'turn',
-        frames: this.anims.generateFrameNumbers('dude', {
-            start: 4,
-            end: 4
-        }),
-        frameRate: 20,
-        repeat: -1
+        frames: [{
+            key: 'dude',
+            frame: 4
+        }],
+        frameRate: 20
     });
 
     this.anims.create({
@@ -127,8 +122,8 @@ function create() {
     cursors = this.input.keyboard.createCursorKeys();
 
     //  Some stars to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
-    stars = this.physics.add.group({
-        key: 'star',
+    collectibles = this.physics.add.group({
+        key: 'collectible',
         repeat: 9,
         setXY: {
             x: 10,
@@ -137,14 +132,14 @@ function create() {
         }
     });
 
-    stars.children.iterate(function (child) {
+    collectibles.children.iterate(function (child) {
 
         //  Give each star a slightly different bounce
         child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
 
     });
 
-    bombs = this.physics.add.group();
+    guardians = this.physics.add.group();
     
 
     //  The score
@@ -164,14 +159,14 @@ levelText = this.add.text(600,16, 'Level: 1', {
 });
     //  Collide the player and the stars with the platforms
     this.physics.add.collider(player, platforms);
-    this.physics.add.collider(stars, platforms);
-    this.physics.add.collider(bombs, platforms);
+    this.physics.add.collider(collectibles, platforms);
+    this.physics.add.collider(guardians, platforms);
   
 
     //  Checks to see if the player overlaps with any of the stars if he does call the collectStar function
-    this.physics.add.overlap(player, stars, collectStar, null, this);
+    this.physics.add.overlap(player, collectibles, collectGem, null, this);
 
-    this.physics.add.collider(player, bombs, hitBomb, null, this);
+    this.physics.add.collider(player, guardians, Hit, null, this);
 
 }
 
@@ -191,7 +186,7 @@ function update() {
     } else {
         player.setVelocityX(0);
 
-        player.anims.play('turn', true);
+        player.anims.play('turn');
     }
 
     if (keyBar.isDown && player.body.touching.down) {
@@ -199,8 +194,8 @@ function update() {
     }
 }
 
-function collectStar(player, star) {
-    star.disableBody(true, true);
+function collectGem(player, collectible) {
+    collectible.disableBody(true, true);
 
     //  Add and update the score
     gems += 10;
@@ -253,12 +248,12 @@ function collectStar(player, star) {
 
 
 
-    if (stars.countActive(true) === 0) {
+    if (collectibles.countActive(true) === 0) {
     level += 1
     levelText.setText ('Level: ' + level)
     
         //  A new batch of stars to collect
-        stars.children.iterate(function (child) {
+        collectibles.children.iterate(function (child) {
 
             child.enableBody(true, child.x, 0, true, true);
 
@@ -266,16 +261,16 @@ function collectStar(player, star) {
 
         var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
 
-        var bomb = bombs.create(x, 16, 'bomb');
-        bomb.setBounce(1);
-        bomb.setCollideWorldBounds(true);
-        bomb.setVelocity(Phaser.Math.Between(-250, 250), 20);
-        bomb.allowGravity = false;
+        var guardian = guardians.create(x, 16, 'guardian');
+        guardian.setBounce(1);
+        guardian.setCollideWorldBounds(true);
+        guardian.setVelocity(Phaser.Math.Between(-250, 250), 20);
+        guardian.allowGravity = false;
 
     }
 }
 
-function hitBomb(player, bomb) {
+function Hit(player, guardian) {
     this.physics.pause();
 
     player.setTint(0xff0000);
