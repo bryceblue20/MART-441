@@ -186,7 +186,7 @@ function update() {
     } else {
         player.setVelocityX(0);
 
-        player.anims.play('turn');
+       // player.anims.play('turn');
     }
 
     if (keyBar.isDown && player.body.touching.down) {
