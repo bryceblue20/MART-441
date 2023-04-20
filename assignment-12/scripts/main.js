@@ -19,8 +19,8 @@ var config = {
 };
 
 var player;
-var collectibles;
-var guardians;
+var stars;
+var bombs;
 var platforms;
 var cursors;
 var third;
@@ -46,8 +46,8 @@ function preload() {
     this.load.image('natureworld','bg.png');
     this.load.image('ground', 'platform.png');
     this.load.image('floor', 'groundlayer.png');
-    this.load.image('collectible', 'gemBlue.png');
-    this.load.image('guardian', 'spinner_spin.png');
+    this.load.image('star', 'gemBlue.png');
+    this.load.image('bomb', 'spinner_spin.png');
     this.load.image('bronze', 'bronze.png');
     this.load.image('rookiebadge', 'rookiebadge.png');
     this.load.image('silver', 'silver.png')
@@ -127,8 +127,8 @@ function create() {
     cursors = this.input.keyboard.createCursorKeys();
 
     //  Some stars to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
-    collectibles = this.physics.add.group({
-        key: 'collectible',
+    stars = this.physics.add.group({
+        key: 'star',
         repeat: 9,
         setXY: {
             x: 10,
@@ -137,14 +137,14 @@ function create() {
         }
     });
 
-    collectibles.children.iterate(function (child) {
+    stars.children.iterate(function (child) {
 
         //  Give each star a slightly different bounce
         child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
 
     });
 
-    guardians = this.physics.add.group();
+    bombs = this.physics.add.group();
     
 
     //  The score
@@ -164,14 +164,14 @@ levelText = this.add.text(600,16, 'Level: 1', {
 });
     //  Collide the player and the stars with the platforms
     this.physics.add.collider(player, platforms);
-    this.physics.add.collider(collectibles, platforms);
-    this.physics.add.collider(guardians, platforms);
+    this.physics.add.collider(stars, platforms);
+    this.physics.add.collider(bombs, platforms);
   
 
     //  Checks to see if the player overlaps with any of the stars if he does call the collectStar function
-    this.physics.add.overlap(player, collectibles, collectGem, null, this);
+    this.physics.add.overlap(player, stars, collectStar, null, this);
 
-    this.physics.add.collider(player, guardians, hitGuard, null, this);
+    this.physics.add.collider(player, bombs, hitBomb, null, this);
 
 }
 
@@ -199,8 +199,8 @@ function update() {
     }
 }
 
-function collectGem(player, collectibles) {
-    collectible.disableBody(true, true);
+function collectStar(player, star) {
+    star.disableBody(true, true);
 
     //  Add and update the score
     gems += 10;
@@ -247,16 +247,18 @@ function collectGem(player, collectibles) {
         master.setCollideWorldBounds(true);;
         this.physics.add.collider(master, platforms);
         this.physics.add.collider(player, master, collectDiamond, null, this);
+        
 
     }
 
 
-    if (collectibles.countActive(true) === 0) {
+
+    if (stars.countActive(true) === 0) {
     level += 1
     levelText.setText ('Level: ' + level)
     
         //  A new batch of stars to collect
-        collectibles.children.iterate(function (child) {
+        stars.children.iterate(function (child) {
 
             child.enableBody(true, child.x, 0, true, true);
 
@@ -264,16 +266,16 @@ function collectGem(player, collectibles) {
 
         var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
 
-        var guardian = guardians.create(x, 16, 'bomb');
-        guardians.setBounce(1);
-        guardians.setCollideWorldBounds(true);
-        guardians.setVelocity(Phaser.Math.Between(-250, 250), 20);
-        guardians.allowGravity = false;
+        var bomb = bombs.create(x, 16, 'bomb');
+        bomb.setBounce(1);
+        bomb.setCollideWorldBounds(true);
+        bomb.setVelocity(Phaser.Math.Between(-250, 250), 20);
+        bomb.allowGravity = false;
 
     }
 }
 
-function hitGuard(player, guardians) {
+function hitBomb(player, bomb) {
     this.physics.pause();
 
     player.setTint(0xff0000);
@@ -320,5 +322,4 @@ function collectDiamond(player, master) {
     master.disableBody(true, true);
     this.add.image(400, 150, 'masterbadge');
 }
-
 
