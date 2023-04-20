@@ -1,0 +1,83 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>Phaser.io</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js
+"></script>
+
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <style>
+    body {
+        background-image: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700393050.jpg");
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+        }
+
+    #info {
+        font-size:1.5vw;
+    }
+
+    #instructionPage {
+        display: inline;
+  max-width: 25%;
+  height: auto;
+  padding-top:3%;
+    }
+    #warning {
+        display: inline;
+  max-width: 20%;
+  height: auto;
+  padding-top:3%;
+    }
+    #logo {
+        display: inline;
+  max-width: 30%;
+  height: auto;
+  padding-top:3%;
+    }
+
+    #restart {
+        font-size:1.6vw;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #restart:hover {
+        font-size:1.6vw;
+        color:white;
+        background-color:lightblue;
+        border-radius: 20%;
+        transition-duration:0.4s;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    p {
+            text-align:center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<p style="text-align:center">
+<img id="logo" src="logo.png">
+</p>
+<p id="info">
+    collect the 5 trophies to level up your rank. Can you reach 800 points, collect <br>
+   the Power Diamond, and achieve master status?  
+</p>
+<p style="text-align:center">
+    <img id="instructionPage" src="instructions-12.png">
+    </p>
+    <p style="text-align:center">
+        <img id="warning" src="warning.png">
+        </p>
+    <p style="text-align:center">
+       
+        <button onClick="window.location.reload();" id="restart">Restart</button></a>
+    </p>
+
+</body>
+</html>
