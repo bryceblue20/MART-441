@@ -33,8 +33,12 @@ var trophies = 0;
 var level = 1;
 var gameOver = false;
 var scoreText;
+var game;
 
-var game = new Phaser.Game(config);
+$(document).ready(function() {
+    game = new Phaser.Game(config);
+});
+  
 
 
 function preload() {
@@ -54,7 +58,7 @@ function preload() {
     this.load.image('expertbadge', 'expertbadge.png');
     this.load.image('diamond', 'diamond.png');
     this.load.image('masterbadge', 'masterbadge.png');
-    this.load.spritesheet('dude', '/assets/dude.png', {
+    this.load.spritesheet('dude', 'assets/dude.png', {
         frameWidth: 32,
         frameHeight: 48
     });
@@ -101,11 +105,12 @@ function create() {
 
     this.anims.create({
         key: 'turn',
-        frames: [{
-            key: 'dude',
-            frame: 4
-        }],
-        frameRate: 20
+        frames: this.anims.generateFrameNumbers('dude', {
+            start: 4,
+            end: 4
+        }),
+        frameRate: 20,
+        repeat: -1
     });
 
     this.anims.create({
@@ -186,7 +191,7 @@ function update() {
     } else {
         player.setVelocityX(0);
 
-       // player.anims.play('turn');
+        player.anims.play('turn', true);
     }
 
     if (keyBar.isDown && player.body.touching.down) {
@@ -317,6 +322,5 @@ function collectDiamond(player, master) {
     master.disableBody(true, true);
     this.add.image(400, 150, 'masterbadge');
 }
-
 
 
