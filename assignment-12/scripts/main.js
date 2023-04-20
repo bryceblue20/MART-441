@@ -199,7 +199,7 @@ function update() {
     }
 }
 
-function collectGem(player, collectible) {
+function collectGem(player, collectibles) {
     collectible.disableBody(true, true);
 
     //  Add and update the score
