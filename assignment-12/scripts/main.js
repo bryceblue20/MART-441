@@ -19,7 +19,7 @@ var config = {
 };
 
 var player;
-var stars;
+var collectibles;
 var bombs;
 var platforms;
 var cursors;
@@ -127,8 +127,8 @@ function create() {
     cursors = this.input.keyboard.createCursorKeys();
 
     //  Some stars to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
-    stars = this.physics.add.group({
-        key: 'star',
+    collectibles = this.physics.add.group({
+        key: 'collectible',
         repeat: 9,
         setXY: {
             x: 10,
@@ -137,7 +137,7 @@ function create() {
         }
     });
 
-    stars.children.iterate(function (child) {
+    collectibles.children.iterate(function (child) {
 
         //  Give each star a slightly different bounce
         child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
@@ -164,12 +164,12 @@ levelText = this.add.text(600,16, 'Level: 1', {
 });
     //  Collide the player and the stars with the platforms
     this.physics.add.collider(player, platforms);
-    this.physics.add.collider(stars, platforms);
+    this.physics.add.collider(collectibles, platforms);
     this.physics.add.collider(bombs, platforms);
   
 
     //  Checks to see if the player overlaps with any of the stars if he does call the collectStar function
-    this.physics.add.overlap(player, stars, collectStar, null, this);
+    this.physics.add.overlap(player, collectibles, collectStar, null, this);
 
     this.physics.add.collider(player, bombs, hitBomb, null, this);
 
@@ -253,7 +253,7 @@ function collectStar(player, star) {
 
 
 
-    if (stars.countActive(true) === 0) {
+    if (collectibles.countActive(true) === 0) {
     level += 1
     levelText.setText ('Level: ' + level)
     
