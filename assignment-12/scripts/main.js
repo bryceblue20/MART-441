@@ -323,3 +323,5 @@ function collectDiamond(player, master) {
     this.add.image(400, 150, 'masterbadge');
 }
 
+
+
