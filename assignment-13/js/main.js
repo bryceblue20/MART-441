@@ -89,7 +89,7 @@ function getTheControls(camera, renderer) {
 
 function loadTheModel() {
   loader = new THREE.OBJLoader();
-  loader.load('models/Snowman.obj', function (object) {
+  loader.load('models/snowman.obj', function (object) {
     object.rotation.z = Math.PI;
     modelObject = object;
     scene.add(object);
