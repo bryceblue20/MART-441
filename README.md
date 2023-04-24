@@ -1,1 +1,9 @@
-This week was incredibly fun and allowed me to stretch my creativity a bit more. I opted to keep the default character because I enjoyed his design and his hat and color scheme fit the colors of the fantasy background I have chosen. aesthetically, this is by far my favorite piece I made this semester, although I do wish I could have figured out how to center the game's canvas to make it look nicer. My main issue this week was figuring out weather to use local files or a CDN to get the code to function without a live local server, which was overall a pain in the neck. It seemed a CDN and external plug-in links were the way to go. Overall, I thoroughly enjoyed the creative portion of this exercise, but the latter situation, wasn't as much.
+(SCROLL OFF OF THE THREE CANVAS'S SIDES TO SCROLL DOWN TO TITLE AND TEXT)
+
+This was a rather straightforward assignment, although my biggest issue was trying to add more vertices onto my spheres but anytime 
+I attempt to enter vertices and scale information within Three.SphereGeometry(); it would mess with my Moon shape, so unfortunately 
+my spheres were rather blocky. I also couldn't quite figure out how to add a material color to my model. Finally, I really wanted to
+attempt to resize the Three Canvas so that the bottom title and text underneath was more visible. I tried to remove the pan and zoom
+controls,but the only way to view is to scroll off the top and sides of the canvas. I do find this a very intruiging JS language, but 
+to me phaser was more enjoyable just because it seems like there is a lot more it could do comparatively then Three, everytime I tried
+anything substantial this week the code wouldn't function correctly.
