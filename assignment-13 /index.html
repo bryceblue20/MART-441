@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>My first three.js app</title>
+
+</head>
+<style>
+  body {
+    background-image: url("https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/Day6_RedFirScene_USGSStephenson.jpg");
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+  }
+
+  section {
+    background-color: rgb(215, 202, 202);
+    border-radius:20%;
+  }
+
+  section:hover {
+    background-color:white;
+    transition-duration:.4s;
+  }
+
+  section, p:hover {
+    font-size:3.2vw;
+    transition-duration:.4s;
+  }
+</style>
+<body>
+  
+  <script src="libs/three.min.js">
+  </script>
+  <script src="libs/OBJLoader.js">
+  </script>
+  <script src="libs/TrackballControls.js"></script>
+  <script src="js/main.js"></script>
+  <section>
+<p style="text-align:center">
+<img src="iceage.png">
+</p>
+<p style="text-align:center; font-size:3vw;padding-top:0%;">
+  in 100,000 years, the Earth will be plunged into its <br>
+  next major glacial period!
+  </p>
+</section>
+</body>
+
+</html>
