@@ -10,12 +10,11 @@ function createEarth() {
     color:  0x1234ee
   });
   sphere = new THREE.Mesh(geometry, material);
-  sphere.position.set(50, 0, -30);
+  sphere.position.set(5, 0, -30);
   scene.add(sphere);
   sphere.scale.x = 40; // SCALE
   sphere.scale.y = 40; // SCALE
   sphere.scale.z = 40; // SCALE
-
 
   animate();
 }
@@ -71,7 +70,6 @@ function getRendererDevice() {
   var renderer = new THREE.WebGLRenderer({
     antialias: true
   });
-  
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
@@ -83,7 +81,7 @@ function getTheControls(camera, renderer) {
   var controls = new THREE.TrackballControls(camera, renderer.domElement);
   controls.zoomSpeed = 0.4;
   controls.panSpeed = 0.4;
-  return controls;
+ return controls;
 }
 
 
@@ -96,7 +94,7 @@ function loadTheModel() {
     object.scale.x = 7; 
     object.scale.y = 7; 
     object.scale.z = 7;
-    object.position.set(-60, 0,-60);
+    object.position.set(7, -40,10);
   
     animateModel();
   });
@@ -105,7 +103,7 @@ function loadTheModel() {
 function animateModel() {
   requestAnimationFrame(animateModel);
  
-  modelObject.rotation.z += 0.04;
+  modelObject.rotation.z += 0.01;
 }
 
 
