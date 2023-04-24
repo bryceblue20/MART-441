@@ -1,4 +1,4 @@
-(SCROLL OFF OF THE THREE CANVAS'S SIDES TO SCROLL DOWN TO TITLE AND TEXT)
+(SCROLL THE MOUSE WHEEL DOWN FROM THE THREE CANVAS'S SIDES TO SCROLL DOWN TO THE TITLE AND TEXT)
 
 This was a rather straightforward assignment, although my biggest issue was trying to add more vertices onto my spheres but anytime 
 I attempt to enter vertices and scale information within Three.SphereGeometry(); it would mess with my Moon shape, so unfortunately 
