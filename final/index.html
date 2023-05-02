@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rigler Wright Eggs</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+     <script type="text/javascript" src="https://malsup.github.io/jquery.cycle.all.js"></script>
+     <script>
+         
+$(document).ready(function(){
+    $(".chicken1").hide();
+    $(".chicken2").hide();
+    $(".chicken3").hide();
+    $(".chicken4").hide();
+    $(".chickenName1").hide();
+    $(".chickenName2").hide();
+    $(".chickenName3").hide();
+    $(".chickenName4").hide();
+    $("#priceInfo").hide();
+    $(".eggMoney").hide();
+    $("#btnSubmit").hide();
+    $("#answer").hide();
+    $(".slogan").delay(3000).animate({
+      right:'250px',
+      opacity:'1' 
+   
+    });
+      $(".logo").delay(1000).animate({
+        height:'auto',
+        width:'60%',
+        opacity:'1' 
+    });
+    $(".priceBtn").click(function(){
+     $(".priceBtn").hide();
+     $("#priceInfo").fadeIn();
+     $(".eggMoney").fadeIn();
+     $("#btnSubmit").fadeIn();
+     $("#answer").show();
+
+  });
+  
+$(".meet").click(function(){
+     $(".meet").hide();
+     $(".chicken1").fadeIn();
+     $(".chicken2").fadeIn();
+     $(".chicken3").fadeIn();
+     $(".chicken4").fadeIn();
+     $(".chickenName1").fadeIn();
+     $(".chickenName2").fadeIn();
+     $(".chickenName3").fadeIn();
+     $(".chickenName4").fadeIn();
+    });
+  });
+
+           </script>
+       <link href="styles.css"rel="stylesheet"type="text/css">
+      
+        
+      <style>
+   @media only screen and (max-width: 600px) {
+}
+@media only screen and (min-width: 600px) {
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 992px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+
+
+body {
+background-color:rgb(126, 107, 87);
+
+}
+
+.mainTitle {
+  background-image: url(https://cosmic-s3.imgix.net/cbafb6f0-284f-11eb-a4ab-931255f2f3f1-shutterstock752120836.jpg?auto=format&w=1920&q=20);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+header {
+  float:right;
+  font-size:5vw;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align:center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color:rgb(156, 132, 106);
+}
+
+.header2 {
+  float:left;
+  font-size:7vw;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align:center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color:rgb(156, 132, 106);
+  margin-top:50px;
+}
+
+.header3 {
+  float:right;
+  font-size:5vw;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align:center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color:rgb(156, 132, 106);
+  margin-top:50px;
+}
+
+
+.slide {
+  padding-left:200px;
+
+}
+.image1 {
+  width: 20%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.image2 {
+  width: 20%;
+ 
+}
+
+.image3 {
+  width: 20%;
+}
+
+.paragraph {
+  padding-right:auto;
+  padding-left:auto;
+  font-size:2.4vw;
+  padding-top:20px;
+
+}
+
+.paragraph2 {
+  margin:auto;
+  font-size:2.4vw;
+  padding-top:20px;
+
+}
+section {
+  margin-top: 50px;
+  margin-right: auto;
+}
+
+.button {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+.logo {
+  width:10%;
+  opacity:0;
+}
+
+.slogan {
+  opacity:0;
+}
+
+.eggMoney {
+  width: 25%;
+  height: auto;
+}
+
+.priceBtn {
+  font-size:2vw;
+  border-radius: 10%;
+  font-weight:bold;
+}
+
+.priceBtn:hover {
+  font-size:2.4vw;
+  transition-duration:.4s;
+  background-color:black;
+  color:white;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 3px;
+}
+
+
+.meet {
+  font-size:2vw;
+  font-weight:bold;
+  margin-top:40px;
+}
+
+.meet:hover {
+  font-size:2.4vw;
+  transition-duration:.4s;
+  background-color:black;
+  color:white;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 3px;
+}
+
+#priceInfo {
+  text-align:center;
+  font-size:3.4vw;
+}
+
+#btnSubmit {
+  font-size:1.7vw;
+}
+
+#answer {
+  font-family:'West Django';
+  font-size:1.7vw;
+}
+* {box-sizing: border-box;}
+.mainSlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+  
+}
+
+.chicken1 {
+  float:right;
+  font-size:5vw;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align:center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color:rgb(91, 78, 64);
+  margin-top:50px;
+  margin-left:150px;
+  margin-right:150px;
+  padding-bottom:0px;
+}
+
+.chickenName {
+  font-size:6vw;
+  font-weight:900px;
+  padding-top:20px;
+  padding-bottom:0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.chicken2 {
+  float:right;
+  font-size:6vw;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align:center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color:rgb(91, 78, 64);
+  margin-top:30px;
+  margin-left:150px;
+  margin-right:150px;
+  padding-bottom:0px;
+}
+
+.chickenName2 {
+  font-size:7vw;
+  font-weight:900px;
+  padding-top:20px;
+  padding-bottom:0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.chicken3 {
+  float:right;
+  font-size:4vw;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align:center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color:rgb(91, 78, 64);
+  margin-top:30px;
+  margin-left:150px;
+  margin-right:150px;
+  padding-bottom:0px;
+}
+.chickenName3 {
+  font-size:4vw;
+  font-weight:900px;
+  padding-top:20px;
+  padding-bottom:0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.chicken4 {
+  float:right;
+  font-size:5vw;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align:center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color:rgb(91, 78, 64);
+  margin-top:30px;
+  margin-left:150px;
+  margin-right:150px;
+  padding-bottom:0px;
+}
+.chickenName4 {
+  font-size:5vw;
+  font-weight:900px;
+  padding-top:20px;
+  padding-bottom:0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.chicken5 {
+  float:right;
+  font-size:5vw;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align:center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color:rgb(91, 78, 64);
+  margin-top:30px;
+  margin-left:150px;
+  margin-right:150px;
+  padding-bottom:0px;
+}
+.chickenName5 {
+  font-size:5vw;
+  font-weight:900px;
+  padding-top:20px;
+  padding-bottom:0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+   </style>
+  </head>
+  <body>
+<section class="mainTitle">
+     <p style="text-align:center">
+       <img class="logo" src="photoshop assets/logo.png">
+     </p>
+  </section>
+     <div class="slogan">
+       <img style="width:40%;height:auto;padding-bottom:0%;padding-top:30px;" src="photoshop assets/slogan.png">
+     </div>
+<section>
+  <header>
+       <img style=float:right;width:40%;height:auto; src="https://www.namesnack.com/images/NameSnack-chicken-farm-business-names-6016x4016-2021083.jpeg?crop=4:3,smart&width=1200&dpr=2">
+       <img style=width:50%;height:auto; src="photoshop assets/title1.png">
+     <div class="paragraph2">
+              Rigler Wright Farm Fresh Eggs are brought <br> 
+              to us courtesy of our happy free-range ,<br>
+              chickens of various high-quality breeds <br>
+              that produce only the most delicious,<br>
+              and nutritious eggs. 
+     </div>
+  </header>
+     <p style="text-align:center;">
+        <img style="width:7%;height:auto;padding-top:40px;" src="eggs.png">
+     </p>
+</section>
+<section>
+    <div class=header2>
+      <img style=float:left;width:30%;height:auto; src="https://i.etsystatic.com/12200411/r/il/e7ee4c/2726608163/il_570xN.2726608163_oznb.jpg">
+      <img style=width:50%;height:auto; src="photoshop assets/title2.png">
+    <div class="paragraph">
+             In the midst of an exponential price growth in the market, our eggs are not only delicious, 
+             but cost-effective <br>compared to the store brand. 
+    </div>
+    </div>
+</section>
+    <p style="text-align:center;">
+      <img style="width:7%;height:auto;padding-top:40px;" src="eggs.png">
+    </p>
+  <div class=header3>
+       <img style=float:right;width:40%;height:auto; src="https://inc42.com/wp-content/uploads/2021/12/eggs.jpg">
+       <img style=width:50%;height:auto; src="photoshop assets/title3.png">
+        <div class="paragraph2">
+             Live near us locally? <br>
+            we will deliver an order <br>
+            of eggs to your door!. 
+        </div>
+    </div>
+<section>
+    <p style="text-align:center">
+      <img class="eggMoney"; src="https://imageio.forbes.com/specials-images/imageserve/642444abbb4de000dc66de23/American-dollars-banknote-in-empty-egg-shell-among-whole-white-chicken-eggs-in/0x0.jpg?format=jpg&crop=4975,2796,x0,y0,safe&width=960">
+    </p>
+    <p id="priceInfo">
+    Below is information regarding pricing for our farm-fresh eggs. <br>
+    <b>Our available amounts are 6, 12, 18, and 32.</b>
+    </p>
+    <p style="text-align:center">
+<button id="btnSubmit" onclick="getResults();">Submit</button>
+<input type="text" size="55" id= "answer">
+    </p>
+    </p>
+<p style=text-align:center>
+<button class="priceBtn">Prices</button><br>
+<button class="meet">Our Best "Employees"</button><br>
+</section>
+<div class=chicken1>
+       <img style=float:right;width:40%;height:auto; src="chickens/boots.png">
+        <div class="chickenName">
+             Boots 
+        </div>
+</div>
+
+
+<div class=chicken2>
+  <img style=float:right;width:40%;height:auto; src="chickens/elizabeak.png">
+   <div class="chickenName2">
+            Elizabeak
+  </div>
+</div>
+
+<div class=chicken3>
+  <img style=float:right;width:45%;height:auto; src="chickens/little_red.png">
+   <div class="chickenName3">
+            Little <br>
+            Red
+  </div>
+</div>
+
+<div class=chicken4>
+  <img style=float:right;width:45%;height:auto; src="chickens/elvira.png">
+   <div class="chickenName4">
+            Elvira <br>     
+  </div>
+</div>
+
+<div class="slideshow-container">
+  <div class="mainSlides fade">
+    <img src="https://images-gmi-pmc.edge-generalmills.com/d44755f6-8431-45fe-9e5a-b00987157bd9.jpg" style="width:100%;height:auto;box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: auto;">
+  </div>
+  <div class="mainSlides fade">
+    <img src="https://post.healthline.com/wp-content/uploads/2020/05/eggs-counter-732x549-thumbnail.jpg" style="width:100%;height:auto;box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
+  </div>
+  <div class="mainSlides fade">
+    <img src="https://www.savoryexperiments.com/wp-content/uploads/2020/03/scrambled-eggs-1.jpg" style="width:100%;height:auto;box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
+    
+  </div>
+
+
+<script>
+          let slideIndex = 0;
+          showSlides();
+          
+          function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mainSlides");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+          
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); 
+          }
+
+          function getResults()
+        {
+            var eggAmount=document.getElementById("answer").value;
+            var thePrice=document.getElementById("priceInfo");
+            if (eggAmount==="6")
+            {
+            thePrice.innerHTML="$3.00";
+            }
+            else if(eggAmount==="12") 
+            {
+                thePrice.innerHTML="$5.00";
+            }
+            else if(eggAmount==="18") 
+            {
+                thePrice.innerHTML="$7.00";
+            }
+            else if(eggAmount==="32") 
+            {
+                thePrice.innerHTML="$12.00";
+            }
+        }
+</script>
+      
+ </body>
+ </html>
+
+ 
+
+
+
+  
+
+
+
+
+
+
+
